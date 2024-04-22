@@ -344,7 +344,7 @@
             let stg2 = document.getElementById('textinput').value;
             if (stg1 === stg2 && stg2 !== '') {
                 alert("Order placed Successfully");
-                window.location.href = "order_confirmation.html";
+                window.location.href = "orderconfirmation.php";
                 return true;
             } else {
                 alert("Please enter a valid captcha");

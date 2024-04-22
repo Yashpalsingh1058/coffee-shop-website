@@ -83,7 +83,7 @@
                 <div class="total-price">₱0</div>
             </div>
             <!-- BUY BUTTON -->
-            <a href="order_placed.html" style="text-decoration: none;"><button type="button" class="btn-buy">Checkout Now</button></a>
+            <a href="order_placed.php" style="text-decoration: none;"><button type="button" class="btn-buy">Checkout Now</button></a>
         </div>
     </header>
      <!-- JS File Link -->
