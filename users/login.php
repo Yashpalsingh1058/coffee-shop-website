@@ -31,9 +31,9 @@
                     echo "<div class='form'>
                         <h3>Incorrect Username/password.</h3><br/>
                         <p class='link'>Click here to <a href='login.php'>Login</a> again.</p>
-                        </div>";
+                        </div>" ;
                 }
-            } else {
+            } 
         ?>
             <form class="form" method="post" name="login">
                 <center>
@@ -66,7 +66,7 @@
                 </div>
         </form>
         <?php
-            }
+            
         ?>
 
         <script src="js/script.js"></script>
