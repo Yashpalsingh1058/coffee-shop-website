@@ -888,7 +888,7 @@ section {
 .footer .support,
 .footer .company,
 .footer .newsletters {
-    flex: 0 0 calc(25% - 30px);
+    flex: 0 0 calc(20% - 30px);
 }
 
 .footer .support h2,

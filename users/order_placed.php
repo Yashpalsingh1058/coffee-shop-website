@@ -291,13 +291,15 @@
                         </div>
 
                         <div class="row mt-3">
-                            <div class="col">
-                                <input type="submit" class="btn btn-primary mb-3" value="Order Now" onclick="validcap()">
-                            </div>
-                            <div class="col">
+                        <div class="col">
                                 <h6><u>Captcha not visible</u> <img src="refresh.jpg" width="40px" onclick="generateCaptcha()" style="cursor: pointer;"></h6>
 
                             </div>
+                            
+                            <div class="col">
+                                <input type="submit" class="btn btn-primary mb-3" value="Order Now" onclick="validcap()">
+                            </div>
+                           
                         </div>
                     </form>
                     </div>

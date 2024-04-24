@@ -373,47 +373,44 @@
                             <div class="box">
                                 <img src="../assets/images/quote-img.png" alt="" class="quote">
                                 <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                </p>
-                                <img src="../assets/images/pic-1.png" alt="" class="user">
-                                <h3>Jane Doe</h3>
-                                <div class="stars">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star-half-alt"></i>
-                                </div>
+                            As a coffee aficionado, I'm always on the hunt for the perfect brew. I found it here. The baristas are true artisans, crafting each cup with precision and passion. Whether it's a quick espresso or a leisurely pour-over, this place never disappoints.
+                            </p>
+                            <img src="../assets/images/pic-1.png" alt="" class="user">
+                            <h3>Jane Doe</h3>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
                             </div>
                         </div>
-                        <div class="col-md-4">
-                            <div class="box">
-                                <img src="../assets/images/quote-img.png" alt="" class="quote">
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                </p>
-                                <img src="../assets/images/pic-2.png" alt="" class="user">
-                                <h3>John Doe</h3>
-                                <div class="stars">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star-half-alt"></i>
-                                </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="box">
+                            <img src="assets/images/quote-img.png" alt="" class="quote">
+                            <p>
+                            This coffee shop isn't just about great coffee; it's about community. I've met some of my closest friends here over a shared love for caffeine and conversation. The cozy atmosphere and friendly staff make it feel like a home away from home.
+                            </p>
+                            <img src="assets/images/pic-2.png" alt="" class="user">
+                            <h3>Mark</h3>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
                             </div>
                         </div>
-                        <div class="col-md-4">
-                            <div class="box">
-                                <img src="../assets/images/quote-img.png" alt="" class="quote">
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                </p>
-                                <img src="../assets/images/pic-3.png" alt="" class="user">
-                                <h3>Jane Doe</h3>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="box">
+                            <img src="assets/images/quote-img.png" alt="" class="quote">
+                            <p>
+                                The aroma of freshly brewed coffee hits you the moment you step in. Every sip is a journey through rich flavors and comforting warmth. This coffee shop has become my sanctuary, where I can unwind and indulge in the perfect cup.
+                            </p>
+                            <img src="assets/images/pic-3.png" alt="" class="user">
+                            <h3>Sarah</h3>
                                 <div class="stars">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -462,7 +459,7 @@
                 <div class="support">
                     <h2>Support</h2>
                     <br /> 
-                    <a href="#">Contact Us</a>
+                    <a href="">Contact Us</a>
                     <a href="#">Customer Service</a>
                     <a href="#">Chatbot Inquiry</a>
                     <a href="#">Submit a Ticket</a>
@@ -476,6 +473,19 @@
                     <a href="#">Partnership</a>
                     <a href="#">Suppliers</a>
                 </div>
+
+            
+
+                <div class="company">
+                    <h2>Main Menu</h2>
+                    <br /> 
+                    <a href="about.php">About Us</a>
+                    <a href="menu.php">Menu</a>
+                    <a href="gallery.php">Gallery</a>
+                    <a href="blog.php">Blog</a>
+                    <a href="contact.php">Contact</a>
+                </div>
+
                 <div class="newsletters">
                     <h2>Newsletters</h2>
                     <br /> 
@@ -487,8 +497,8 @@
                 </div>
                 <div class="credit">
                     <hr /><br/>
-                    <h2>KapeTann Brewed Coffee © 2023 | All Rights Reserved.</h2>
-                    <h2>Designed by <span>Algo Filipino</span> | Teravision</h2>
+                    <h2>Coffee © 2023 | All Rights Reserved.</h2>
+                    <h2>Designed by <span>YASHPAL SINGH & RAJDEEP KAUR</span> | BSc IT</h2>
                 </div>
             </div>
         </section>

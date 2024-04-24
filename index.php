@@ -29,56 +29,63 @@
     <!-- font awesome cdn link -->
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico"><!-- Favicon / Icon -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"><!-- Google font cdn link -->
+    <style>
+    .footer .support,
+    .footer .company,
+    .footer .newsletters {
+        flex: 0 0 calc(20% - 30px);
+    }
+    </style>
 </head>
 
 <body>
 
-     <!-- HEADER SECTION -->
-     <?php 
+    <!-- HEADER SECTION -->
+    <?php 
     include('header.php');
-    ?> 
+    ?>
 
-        <!-- MAIN MENU FOR SMALLER DEVICES -->
-        <nav class="navbar navbar-expand-lg">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a href="home.php" class="text-decoration-none">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="about.php" class="text-decoration-none">About</a>
-                </li>
-                <li class="nav-item">
-                    <a href="menu.php" class="text-decoration-none">Menu</a>
-                </li>
-                <li class="nav-item">
-                    <a href="gallery.php" class="text-decoration-none">Gallery</a>
-                </li>
-                <li class="nav-item">
-                    <a href="blogs.php" class="text-decoration-none">Blogs</a>
-                </li>
-                <li class="nav-item">
-                    <a href="contact.php" class="text-decoration-none">Contact</a>
-                </li>
-                <li class="nav-item">
-                    <a href="users/login.php" class="text-decoration-none">Login</a>
-                </li>
-            </ul>
-            </div>
-        </nav>
-        <div class="icons">
-            <div class="fas fa-search" id="search-btn"></div>
-            <div class="fas fa-shopping-cart" id="cart-btn" onclick="redirectCart()"></div>
-            <div class="fas fa-bars" id="menu-btn"></div>
+    <!-- MAIN MENU FOR SMALLER DEVICES -->
+    <nav class="navbar navbar-expand-lg">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a href="home.php" class="text-decoration-none">Home</a>
+            </li>
+            <li class="nav-item">
+                <a href="about.php" class="text-decoration-none">About</a>
+            </li>
+            <li class="nav-item">
+                <a href="menu.php" class="text-decoration-none">Menu</a>
+            </li>
+            <li class="nav-item">
+                <a href="gallery.php" class="text-decoration-none">Gallery</a>
+            </li>
+            <li class="nav-item">
+                <a href="blogs.php" class="text-decoration-none">Blogs</a>
+            </li>
+            <li class="nav-item">
+                <a href="contact.php" class="text-decoration-none">Contact</a>
+            </li>
+            <li class="nav-item">
+                <a href="users/login.php" class="text-decoration-none">Login</a>
+            </li>
+        </ul>
         </div>
+    </nav>
+    <div class="icons">
+        <div class="fas fa-search" id="search-btn"></div>
+        <div class="fas fa-shopping-cart" id="cart-btn" onclick="redirectCart()"></div>
+        <div class="fas fa-bars" id="menu-btn"></div>
+    </div>
 
-        <!-- SEARCH TEXT BOX -->
-        <div class="search-form">
-            <input type="search" id="search-box" class="form-control" placeholder="search here...">
-            <label for="search-box" class="fas fa-search"></label>
-        </div>
+    <!-- SEARCH TEXT BOX -->
+    <div class="search-form">
+        <input type="search" id="search-box" class="form-control" placeholder="search here...">
+        <label for="search-box" class="fas fa-search"></label>
+    </div>
 
-        <!-- CART SECTION -->
-       
+    <!-- CART SECTION -->
+
     </header>
 
     <!-- HERO SECTION -->
@@ -121,8 +128,8 @@
         </div>
     </section>
 
-     <!-- MENU SECTION -->
-     <section class="menu" id="menu" style="width: initial;">
+    <!-- MENU SECTION -->
+    <section class="menu" id="menu" style="width: initial;">
         <h1 class="heading">Our <span>Menu</span></h1>
         <div class="box-container">
             <div class="container">
@@ -375,7 +382,8 @@
                 </div><br />
                 <center>
                     <button id="showHideBtn" class="btn btn-dark">SHOW MORE</button>
-                </center>
+                           
+                </center>
             </div>
         </div>
     </section>
@@ -458,8 +466,9 @@
                         <div class="box">
                             <img src="assets/images/quote-img.png" alt="" class="quote">
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                As a coffee aficionado, I'm always on the hunt for the perfect brew. I found it here.
+                                The baristas are true artisans, crafting each cup with precision and passion. Whether
+                                it's a quick espresso or a leisurely pour-over, this place never disappoints.
                             </p>
                             <img src="assets/images/pic-1.png" alt="" class="user">
                             <h3>Jane Doe</h3>
@@ -476,11 +485,12 @@
                         <div class="box">
                             <img src="assets/images/quote-img.png" alt="" class="quote">
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                This coffee shop isn't just about great coffee; it's about community. I've met some of
+                                my closest friends here over a shared love for caffeine and conversation. The cozy
+                                atmosphere and friendly staff make it feel like a home away from home.
                             </p>
                             <img src="assets/images/pic-2.png" alt="" class="user">
-                            <h3>John Doe</h3>
+                            <h3>Mark</h3>
                             <div class="stars">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -494,11 +504,12 @@
                         <div class="box">
                             <img src="assets/images/quote-img.png" alt="" class="quote">
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                The aroma of freshly brewed coffee hits you the moment you step in. Every sip is a
+                                journey through rich flavors and comforting warmth. This coffee shop has become my
+                                sanctuary, where I can unwind and indulge in the perfect cup.
                             </p>
                             <img src="assets/images/pic-3.png" alt="" class="user">
-                            <h3>Jane Doe</h3>
+                            <h3>Sarah</h3>
                             <div class="stars">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -515,7 +526,7 @@
 
     <!-- CONTACT US SECTION -->
     <section class="contact" id="contact">
-        <h1 class="heading"><span>Contact</span> Us</h1>
+        <h1 class="heading"><span>Conta</span> Contact Us</h1>
         <div class="row">
             <div id="map" class="map pull-left"></div>
             <form name="contact" method="POST" action="https://formspree.io/f/xayzavgb">
@@ -547,19 +558,21 @@
             <div class="support">
                 <h2>Support</h2>
                 <br />
-                <a href="#">Contact Us</a>
+                <a href="contact.php">Contact Us</a>
                 <a href="#">Customer Service</a>
-                <a href="#">Chatbot Inquiry</a>
-                <a href="#">Submit a Ticket</a>
+                <a href="users/login.php">Chatbot Inquiry</a>
+                <a href="menu.php">Order</a>
             </div>
+            
+
             <div class="company">
-                <h2>Company</h2>
+                <h2>Main Menu</h2>
                 <br />
-                <a href="#">About Us</a>
-                <a href="#">Affiliates</a>
-                <a href="#">Resources</a>
-                <a href="#">Partnership</a>
-                <a href="#">Suppliers</a>
+                <a href="about.php">About Us</a>
+                <a href="menu.php">Menu</a>
+                <a href="gallery.php">Gallery</a>
+                <a href="blog.php">Blog</a>
+                <a href="contact.php">Contact</a>
             </div>
             <div class="newsletters">
                 <h2>Newsletters</h2>
@@ -579,7 +592,7 @@
     </section>
 
     <!-- CHAT BAR BLOCK -->
-    <div class="chat-bar-collapsible">
+    <div class="chat-bar-collapsible" id="direct-chatboot">
         <button id="chat-button" type="button" class="collapsible">Chat with us! &nbsp;
             <i id="chat-icon" style="color: #fff;" class="fas fa-comments"></i>
         </button>
@@ -614,63 +627,69 @@
         </div>
     </div>
 
-  <!-- JS File Link -->
-  <script src="../assets/js/googleSignIn.js"></script>
-        <script src="../assets/js/script.js"></script>
-        <script src="../assets/js/responses.js"></script>
-        <script src="../assets/js/convo.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- JS File Link -->
+    <script src="../assets/js/googleSignIn.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/responses.js"></script>
+    <script src="../assets/js/convo.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-        <script>
-            // CODE FOR THE FORMSPREE
-            window.onbeforeunload = () => {
-                for(const form of document.getElementsByTagName('form')) {
-                    form.reset();
-                }
+    <script>
+    // CODE FOR THE FORMSPREE
+    window.onbeforeunload = () => {
+        for (const form of document.getElementsByTagName('form')) {
+            form.reset();
+        }
+    }
+
+    // CODE FOR THE GOOGLE MAPS API
+    function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+            center: {
+                lat: 14.99367271992383,
+                lng: 120.17629231186626
+            },
+            zoom: 9
+        });
+
+        var marker = new google.maps.Marker({
+            position: {
+                lat: 14.99367271992383,
+                lng: 120.17629231186626
+            },
+            map: map,
+            title: 'Your Location'
+        });
+    }
+
+    // CODE FOR THE SHOW MORE & SHOW LESS BUTTON IN MENU
+    $(document).ready(function() {
+        $(".row-to-hide").hide();
+        $("#showHideBtn").text("SHOW MORE");
+        $("#showHideBtn").click(function() {
+            $(".row-to-hide").toggle();
+            if ($(".row-to-hide").is(":visible")) {
+                $(this).text("SHOW LESS");
+            } else {
+                $(this).text("SHOW MORE");
             }
+        });
+    });
 
-            // CODE FOR THE GOOGLE MAPS API
-            function initMap() {
-                var map = new google.maps.Map(document.getElementById('map'), {
-                    center: {lat: 14.99367271992383, lng: 120.17629231186626},
-                    zoom: 9
-                });
-
-                var marker = new google.maps.Marker({
-                    position: {lat: 14.99367271992383, lng: 120.17629231186626},
-                    map: map,
-                    title: 'Your Location'
-                });
+    // CODE FOR THE SHOW MORE & SHOW LESS BUTTON IN GALLERY
+    $(document).ready(function() {
+        $(".pic-to-hide").hide();
+        $("#showBtn").text("SHOW MORE");
+        $("#showBtn").click(function() {
+            $(".pic-to-hide").toggle();
+            if ($(".pic-to-hide").is(":visible")) {
+                $(this).text("SHOW LESS");
+            } else {
+                $(this).text("SHOW MORE");
             }
-
-            // CODE FOR THE SHOW MORE & SHOW LESS BUTTON IN MENU
-            $(document).ready(function() {
-                $(".row-to-hide").hide();
-                $("#showHideBtn").text("SHOW MORE");
-                $("#showHideBtn").click(function() {
-                    $(".row-to-hide").toggle();
-                    if ($(".row-to-hide").is(":visible")) {
-                        $(this).text("SHOW LESS");
-                    } else {
-                        $(this).text("SHOW MORE");
-                    }
-                });
-            });
-
-            // CODE FOR THE SHOW MORE & SHOW LESS BUTTON IN GALLERY
-            $(document).ready(function() {
-                $(".pic-to-hide").hide();
-                $("#showBtn").text("SHOW MORE");
-                $("#showBtn").click(function() {
-                    $(".pic-to-hide").toggle();
-                    if ($(".pic-to-hide").is(":visible")) {
-                        $(this).text("SHOW LESS");
-                    } else {
-                        $(this).text("SHOW MORE");
-                    }
-                });
-            });
-        </script> 
+        });
+    });
+    </script>
 </body>
 
 </html>
