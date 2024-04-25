@@ -68,86 +68,14 @@
     </section>
 
     <!-- FOOTER SECTION -->
-    <section class="footer">
-        <div class="footer-container">
-            <div class="logo">
-                <img src="../assets/images/logo.png" class="img"><br />
-                <i class="fas fa-envelope"></i>
-                <p>abfiguerrez18@gmail.com</p><br />
-                <i class="fas fa-phone"></i>
-                <p>+63 917-134-1422</p><br />
-                <i class="fab fa-facebook-messenger"></i>
-                <p>@kapetanncoffee</p><br />
-            </div>
-            <div class="support">
-                <h2>Support</h2>
-                <br />
-                <a href="#">Contact Us</a>
-                <a href="#">Customer Service</a>
-                <a href="#">Chatbot Inquiry</a>
-                <a href="#">Submit a Ticket</a>
-            </div>
-            <div class="company">
-                <h2>Company</h2>
-                <br />
-                <a href="#">About Us</a>
-                <a href="#">Affiliates</a>
-                <a href="#">Resources</a>
-                <a href="#">Partnership</a>
-                <a href="#">Suppliers</a>
-            </div>
-            <div class="newsletters">
-                <h2>Newsletters</h2>
-                <br />
-                <p>Subscribe to our newsletter for news and updates!</p>
-                <div class="input-wrapper">
-                    <input type="email" class="newsletter" placeholder="Your email address">
-                    <i id="paper-plane-icon" class="fas fa-paper-plane"></i>
-                </div>
-            </div>
-            <div class="credit">
-                <hr /><br />
-                <h2>Coffee © 2023 | All Rights Reserved.</h2>
-                <h2>Designed by <span>YASHPAL SINGH & RAJDEEP KAUR</span> | BSc IT</h2>
-            </div>
-        </div>
-    </section>
-
+    <?php 
+    include('footer.php');
+    ?>
+        
     <!-- CHAT BAR BLOCK -->
-    <div class="chat-bar-collapsible">
-        <button id="chat-button" type="button" class="collapsible">Chat with us! &nbsp;
-            <i id="chat-icon" style="color: #fff;" class="fas fa-comments"></i>
-        </button>
-        <div class="content">
-            <div class="full-chat-block">
-                <!-- Message Container -->
-                <div class="outer-container">
-                    <div class="chat-container">
-                        <!-- Messages -->
-                        <div id="chatbox">
-                            <h5 id="chat-timestamp"></h5>
-                            <p id="botStarterMessage" class="botText"><span>Loading...</span></p>
-                        </div>
-                        <!-- User input box -->
-                        <div class="chat-bar-input-block">
-                            <div id="userInput">
-                                <input id="textInput" class="input-box" type="text" name="msg"
-                                    placeholder="Tap 'Enter' to send a message">
-                                <p></p>
-                            </div>
-                            <div class="chat-bar-icons">
-                                <i id="chat-icon" style="color: #333;" class="fa fa-fw fa-paper-plane"
-                                    onclick="sendButton()"></i>
-                            </div>
-                        </div>
-                        <div id="chat-bar-bottom">
-                            <p></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <?php 
+    include('chatboot.php');
+    ?>
 
      <!-- JS File Link -->
    <script src="../assets/js/googleSignIn.js"></script>

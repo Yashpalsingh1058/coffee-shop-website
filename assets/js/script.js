@@ -196,3 +196,116 @@ function updateTotal() {
         
         document.getElementsByClassName("total-price")[0].innerText = "₱" + total;
 }
+
+
+// Store add-to-cart products in local storage
+// Add event listeners to all "Add to Cart" buttons
+// var addToCartButtons = document.querySelectorAll('.add-cart');
+// addToCartButtons.forEach(function(button) {
+//     button.addEventListener('click', function(event) {
+//         var productBox = event.target.parentElement;
+//         var productImg = productBox.querySelector('.product-img').getAttribute('src');
+//         var productTitle = productBox.querySelector('.product-title').innerText;
+//         var productPrice = productBox.querySelector('.price').innerText;
+
+//         // Create an object to store product details
+//         var productDetails = {
+//             title: productTitle,
+//             price: productPrice,
+//             productImg: productImg
+//         };
+
+//         // Retrieve existing cart items from local storage
+//         var cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+
+//         // Add the new product to the cart
+//         cartItems.push(productDetails);
+
+//         // Store updated cart items back to local storage
+//         localStorage.setItem('cart', JSON.stringify(cartItems));
+
+//         // Optional: You can provide some feedback to the user, like a message or animation
+//         alert('Product added to cart!');
+//     });
+// });
+
+
+
+
+function addProductToCart(title, price, productImg) {
+    var cartShopBox = document.createElement("div");
+    cartShopBox.classList.add("cart-box");
+    var cartItems = document.getElementsByClassName("cart-content")[0];
+    var cartItemsNames = cartItems.getElementsByClassName("cart-product-title");
+    for (var i = 0; i < cartItemsNames.length; i++) {
+        if (cartItemsNames[i].innerText == title) {
+            alert("You have already added this item to cart!")
+            return;
+        }
+    }
+    var cartBoxContent = `
+                    <img src="${productImg}" alt="" class="cart-img">
+                    <div class="detail-box">
+                        <div class="cart-product-title">${title}</div>
+                        <div class="cart-price">${price}</div>
+                        <input type="number" value="1" min="1" class="cart-quantity">
+                    </div>
+                    <!-- REMOVE BUTTON -->
+                    <i class="fas fa-trash cart-remove"></i>`;
+    cartShopBox.innerHTML = cartBoxContent;
+    cartItems.append(cartShopBox);
+
+    // Get the quantity input element
+    var quantityInput = cartShopBox.querySelector('.cart-quantity');
+    
+    // Add event listener to update quantity when changed
+    quantityInput.addEventListener('change', function() {
+        updateQuantity(title, this.value);
+    });
+
+    // Create an object to store product details
+    var productDetails = {
+        title: title,
+        price: price,
+        productImg: productImg,
+        quantity: parseInt(quantityInput.value) // Parse the value to integer
+    };
+
+    // Retrieve existing cart items from local storage
+    var cartItemsStorage = JSON.parse(localStorage.getItem('cart')) || [];
+
+    // Check if the product already exists in the cart
+    var existingProductIndex = cartItemsStorage.findIndex(item => item.title === title);
+
+    if (existingProductIndex !== -1) {
+        // If the product exists, update its quantity
+        cartItemsStorage[existingProductIndex].quantity += parseInt(quantityInput.value);
+    } else {
+        // If the product does not exist, add it to the cart with default quantity
+        cartItemsStorage.push(productDetails);
+    }
+
+    // Store updated cart items back to local storage
+    localStorage.setItem('cart', JSON.stringify(cartItemsStorage));
+}
+
+function updateQuantity(title, newQuantity) {
+    // Retrieve cart items from local storage
+    var cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+
+    // Find the index of the item with the specified title
+    var itemIndex = cartItems.findIndex(item => item.title === title);
+
+    // If the item is found, update its quantity
+    if (itemIndex !== -1) {
+        cartItems[itemIndex].quantity = parseInt(newQuantity);
+
+        // Store updated cart items back to local storage
+        localStorage.setItem('cart', JSON.stringify(cartItems));
+    }
+}
+
+
+window.onload = function() {
+    localStorage.removeItem('cart');
+}

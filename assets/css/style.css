@@ -151,10 +151,12 @@ section {
     width: 35rem;
     background-color: #fff;
     padding: 0 1.5rem;
+    
 }
 
 .header .cart.active {
     right: 0;
+    overflow: auto;
 }
 
 .header .cart .cart-item {

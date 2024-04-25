@@ -26,10 +26,12 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/convo.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <!-- font awesome cdn link -->
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico"><!-- Favicon / Icon -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"><!-- Google font cdn link -->
     <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap");
     .footer .support,
     .footer .company,
     .footer .newsletters {
@@ -44,49 +46,6 @@
     <?php 
     include('header.php');
     ?>
-
-    <!-- MAIN MENU FOR SMALLER DEVICES -->
-    <nav class="navbar navbar-expand-lg">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-                <a href="home.php" class="text-decoration-none">Home</a>
-            </li>
-            <li class="nav-item">
-                <a href="about.php" class="text-decoration-none">About</a>
-            </li>
-            <li class="nav-item">
-                <a href="menu.php" class="text-decoration-none">Menu</a>
-            </li>
-            <li class="nav-item">
-                <a href="gallery.php" class="text-decoration-none">Gallery</a>
-            </li>
-            <li class="nav-item">
-                <a href="blogs.php" class="text-decoration-none">Blogs</a>
-            </li>
-            <li class="nav-item">
-                <a href="contact.php" class="text-decoration-none">Contact</a>
-            </li>
-            <li class="nav-item">
-                <a href="users/login.php" class="text-decoration-none">Login</a>
-            </li>
-        </ul>
-        </div>
-    </nav>
-    <div class="icons">
-        <div class="fas fa-search" id="search-btn"></div>
-        <div class="fas fa-shopping-cart" id="cart-btn" onclick="redirectCart()"></div>
-        <div class="fas fa-bars" id="menu-btn"></div>
-    </div>
-
-    <!-- SEARCH TEXT BOX -->
-    <div class="search-form">
-        <input type="search" id="search-box" class="form-control" placeholder="search here...">
-        <label for="search-box" class="fas fa-search"></label>
-    </div>
-
-    <!-- CART SECTION -->
-
-    </header>
 
     <!-- HERO SECTION -->
     <section class="home" id="home">
@@ -130,143 +89,169 @@
 
     <!-- MENU SECTION -->
     <section class="menu" id="menu" style="width: initial;">
-        <h1 class="heading">Our <span>Menu</span></h1>
-        <div class="box-container">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <a href="Americano.php" class="Details">
-                            <div class="box">
-                                <img src="assets/images/cart-item-1.png" alt="" class="product-img">
-                                <h3 class="product-title">Americano - Hot Espresso (12 OZ)</h3>
-                                <div class="price">₱45.00</div>
-                                <a class="btn add-cart" onclick="redirectCart()">Add to Cart</a>
-                            </div>
-                        </a>
-                    </div> <br />
-                    <div class="col-md-4">
-                        <a href="Colombian.php" class="Details">
-                            <div class="box">
-                                <img src="assets/images/cart-item-2.png" alt="" class="product-img">
-                                <h3 class="product-title">Colombian Supremo Cup (12 OZ)</h3>
-                                <div class="price">₱40.00</div>
-                                <a class="btn add-cart" onclick="redirectCart()">Add to Cart</a>
-                            </div>
-                        </a>
-                    </div><br />
-                    <div class="col-md-4">
-                        <a href="Nitro.php" class="Details">
-                            <div class="box">
-                                <img src="assets/images/cart-item-3.png" alt="" class="product-img">
-                                <h3 class="product-title">Nitro Cold Brew w/ Straw (12 OZ)</h3>
-                                <div class="price">₱50.00</div>
-                                <a class="btn add-cart" onclick="redirectCart()">Add to Cart</a>
-                            </div>
-                        </a>
-                    </div>
-                </div><br />
-                <div class="row">
-                    <div class="col-md-4">
-                        <a href="Seasonal.php" class="Details">
-                            <div class="box">
-                                <img src="assets/images/cart-item-4.png" alt="" class="product-img">
-                                <h3 class="product-title">Seasonal Single-Origin (12 OZ)</h3>
-                                <div class="price">₱30.00</div>
-                                <a class="btn add-cart" onclick="redirectCart()">Add to Cart</a>
-                            </div>
-                        </a>
-                    </div><br />
-                    <div class="col-md-4">
-                        <a href="Indonesian.php" class="Details">
-                            <div class="box">
-                                <img src="assets/images/cart-item-5.png" alt="" class="product-img">
-                                <h3 class="product-title">Indonesian Sumatra Mandheling (12 OZ)</h3>
-                                <div class="price">₱40.00</div>
-                                <a class="btn add-cart" onclick="redirectCart()">Add to Cart</a>
-                            </div>
-                        </a>
-                    </div><br />
-                    <div class="col-md-4">
-                        <a href="Mint.php" class="Details">
-                            <div class="box">
-                                <img src="assets/images/cart-item-6.png" alt="" class="product-img">
-                                <h3 class="product-title">Mint Mojito Iced Coffee (12 OZ)</h3>
-                                <div class="price">₱55.00</div>
-                                <a class="btn add-cart" onclick="redirectCart()">Add to Cart</a>
-                            </div>
-                        </a>
-                    </div>
-                </div><br />
-                <div class="row row-to-hide">
-                    <div class="col-md-4">
-                        <a href="Iced.php" class="Details">
-                            <div class="box">
-                                <img src="assets/images/cart-item-7.png" alt="" class="product-img">
-                                <h3 class="product-title">Iced Americano (12 OZ)</h3>
-                                <div class="price">₱35.00</div>
-                                <a class="btn add-cart" onclick="redirectCart()">Add to Cart</a>
-                            </div>
-                        </a>
-                    </div><br />
-                    <div class="col-md-4">
-                        <a href="Speciality.php" class="Details">
-                            <div class="box">
-                                <img src="assets/images/cart-item-8.png" alt="" class="product-img">
-                                <h3 class="product-title">Specialty Brews (12 OZ)</h3>
-                                <div class="price">₱85.00</div>
-                                <a class="btn add-cart" onclick="redirectCart()">Add to Cart</a>
-                            </div>
-                        </a>
-                    </div><br />
-                    <div class="col-md-4">
-                        <a href="Cappuccino.php" class="Details">
-                            <div class="box">
-                                <img src="assets/images/cart-item-9.png" alt="" class="product-img">
-                                <h3 class="product-title">Cappuccino</h3>
-                                <div class="price">₱10.00</div>
-                                <a class="btn add-cart" onclick="redirectCart()">Add to Cart</a>
-                            </div>
-                        </a>
-                    </div>
-                </div><br />
-                <div class="row row-to-hide">
-                    <div class="col-md-4">
-                        <a href="Ethiopian.php" class="Details">
-                            <div class="box">
-                                <img src="assets/images/cart-item-10.png" alt="" class="product-img">
-                                <h3 class="product-title">Ethiopian Yirgacheffe Cup (12 OZ)</h3>
-                                <div class="price">₱55.00</div>
-                                <a class="btn add-cart" onclick="redirectCart()">Add to Cart</a>
-                            </div>
-                        </a>
-                    </div><br />
-                    <div class="col-md-4">
-                        <a href="Cold.php" class="Details">
-                            <div class="box">
-                                <img src="assets/images/cart-item-11.png" alt="" class="product-img">
-                                <h3 class="product-title">Cold Brew Tonic In a Cup (12 OZ)</h3>
-                                <div class="price">₱35.00</div>
-                                <a class="btn add-cart" onclick="redirectCart()">Add to Cart</a>
-                            </div>
-                        </a>
-                    </div><br />
-                    <div class="col-md-4">
-                        <a href="Caramel.php" class="Details">
-                            <div class="box">
-                                <img src="assets/images/cart-item-12.png" alt="" class="product-img">
-                                <h3 class="product-title">Caramel Cold Foam Cold Brew (12 OZ)</h3>
-                                <div class="price">₱55.00</div>
-                                <a class="btn add-cart" onclick="redirectCart()">Add to Cart</a>
-                            </div>
-                        </a>
-                    </div>
-                </div><br />
-                <center>
-                    <button id="showHideBtn" class="btn btn-dark">SHOW MORE</button>
-                </center>
+      <h1 class="heading">You May Also <span>Like</span></h1>
+      <div class="box-container">
+        <div class="product-cont">
+          <div class="row">
+            <div class="col-md-4">
+              <a href="Americano.php" class="Details">
+                <div class="box">
+                  <img src="assets/images/cart-item-1.png" alt="" class="product-img" />
+                  <h3 class="product-title">
+                    Americano - Hot Espresso (12 OZ)
+                  </h3>
+                  <div class="price">₱45.00</div>
+                  <a class="add-cart" onclick="redirectCart()">Add to Cart</a>
+                </div>
+              </a>
             </div>
+            <br />
+            <div class="col-md-4">
+              <a href="index.php" class="Details">
+                <div class="box">
+                  <img src="assets/images/cart-item-2.png" alt="" class="product-img" />
+                  <h3 class="product-title">Colombian Supremo Cup (12 OZ)</h3>
+                  <div class="price">₱40.00</div>
+                  <a class="add-cart" onclick="redirectCart()">Add to Cart</a>
+                </div>
+              </a>
+            </div>
+            <br />
+            <div class="col-md-4">
+              <a href="index.php" class="Details">
+                <div class="box">
+                  <img src="assets/images/cart-item-3.png" alt="" class="product-img" />
+                  <h3 class="product-title">
+                    Nitro Cold Brew w/ Straw (12 OZ)
+                  </h3>
+                  <div class="price">₱50.00</div>
+                  <a class="add-cart" onclick="redirectCart()">Add to Cart</a>
+                </div>
+              </a>
+            </div>
+          </div>
+          <br />
+          <div class="row">
+            <div class="col-md-4">
+              <a href="index.php" class="Details">
+                <div class="box">
+                  <img src="assets/images/cart-item-4.png" alt="" class="product-img" />
+                  <h3 class="product-title">Seasonal Single-Origin (12 OZ)</h3>
+                  <div class="price">₱30.00</div>
+                  <a class="add-cart" onclick="redirectCart()">Add to Cart</a>
+                </div>
+              </a>
+            </div>
+            <br />
+            <div class="col-md-4">
+              <a href="index.php" class="Details">
+                <div class="box">
+                  <img src="assets/images/cart-item-5.png" alt="" class="product-img" />
+                  <h3 class="product-title">
+                    Indonesian Sumatra Mandheling (12 OZ)
+                  </h3>
+                  <div class="price">₱40.00</div>
+                  <a class="add-cart" onclick="redirectCart()">Add to Cart</a>
+                </div>
+              </a>
+            </div>
+            <br />
+            <div class="col-md-4">
+              <a href="index.php" class="Details">
+                <div class="box">
+                  <img src="assets/images/cart-item-6.png" alt="" class="product-img" />
+                  <h3 class="product-title">Mint Mojito Iced Coffee (12 OZ)</h3>
+                  <div class="price">₱55.00</div>
+                  <a class="add-cart" onclick="redirectCart()">Add to Cart</a>
+                </div>
+              </a>
+            </div>
+          </div>
+          <br />
+          <div class="row row-to-hide">
+            <div class="col-md-4">
+              <a href="index.php" class="Details">
+                <div class="box">
+                  <img src="assets/images/cart-item-7.png" alt="" class="product-img" />
+                  <h3 class="product-title">Iced Americano (12 OZ)</h3>
+                  <div class="price">₱35.00</div>
+                  <a class="add-cart" onclick="redirectCart()">Add to Cart</a>
+                </div>
+              </a>
+            </div>
+            <br />
+            <div class="col-md-4">
+              <a href="index.php" class="Details">
+                <div class="box">
+                  <img src="assets/images/cart-item-8.png" alt="" class="product-img" />
+                  <h3 class="product-title">Specialty Brews (12 OZ)</h3>
+                  <div class="price">₱85.00</div>
+                  <a class="add-cart" onclick="redirectCart()">Add to Cart</a>
+                </div>
+              </a>
+            </div>
+            <br />
+            <div class="col-md-4">
+              <a href="index.php" class="Details">
+                <div class="box">
+                  <img src="assets/images/cart-item-9.png" alt="" class="product-img" />
+                  <h3 class="product-title">Seasonal Origin (12 OZ)</h3>
+                  <div class="price">₱80.00</div>
+                  <a class="add-cart" onclick="redirectCart()">Add to Cart</a>
+                </div>
+              </a>
+            </div>
+          </div>
+          <br />
+          <div class="row row-to-hide">
+            <div class="col-md-4">
+              <a href="index.php" class="Details">
+                <div class="box">
+                  <img src="assets/images/cart-item-10.png" alt="" class="product-img" />
+                  <h3 class="product-title">
+                    Ethiopian Yirgacheffe Cup (12 OZ)
+                  </h3>
+                  <div class="price">₱55.00</div>
+                  <a class="add-cart" onclick="redirectCart()">Add to Cart</a>
+                </div>
+              </a>
+            </div>
+            <br />
+            <div class="col-md-4">
+              <a href="index.php" class="Details">
+                <div class="box">
+                  <img src="assets/images/cart-item-11.png" alt="" class="product-img" />
+                  <h3 class="product-title">
+                    Cold Brew Tonic In a Cup (12 OZ)
+                  </h3>
+                  <div class="price">₱35.00</div>
+                  <a class="add-cart" onclick="redirectCart()">Add to Cart</a>
+                </div>
+              </a>
+            </div>
+            <br />
+            <div class="col-md-4">
+              <a href="index.php" class="Details">
+                <div class="box">
+                  <img src="assets/images/cart-item-12.png" alt="" class="product-img" />
+                  <h3 class="product-title">
+                    Caramel Cold Foam Cold Brew (12 OZ)
+                  </h3>
+                  <div class="price">₱55.00</div>
+                  <a class="add-cart" onclick="redirectCart()">Add to Cart</a>
+                </div>
+              </a>
+            </div>
+          </div>
+          <br />
+          <center>
+                    <button id="showHideBtn" class="btn btn-dark">SHOW MORE</button>
+                </center>
         </div>
+      </div>
     </section>
+    
+
 
 
     <!-- GALLERY SECTION -->
@@ -381,7 +366,7 @@
                     </div>
                 </div><br />
                 <center>
-                    <button id="showHideBtn" class="btn btn-dark">SHOW MORE</button>
+                    <button id="showBtn" class="btn btn-dark">SHOW MORE</button>
                            
                 </center>
             </div>
@@ -544,88 +529,14 @@
     </section>
 
     <!-- FOOTER SECTION -->
-    <section class="footer">
-        <div class="footer-container">
-            <div class="logo">
-                <img src="assets/images/logo.png" class="img"><br />
-                <i class="fas fa-envelope"></i>
-                <p>abfiguerrez18@gmail.com</p><br />
-                <i class="fas fa-phone"></i>
-                <p>+63 917-134-1422</p><br />
-                <i class="fab fa-facebook-messenger"></i>
-                <p>@kapetanncoffee</p><br />
-            </div>
-            <div class="support">
-                <h2>Support</h2>
-                <br />
-                <a href="contact.php">Contact Us</a>
-                <a href="#">Customer Service</a>
-                <a href="users/login.php">Chatbot Inquiry</a>
-                <a href="menu.php">Order</a>
-            </div>
-            
-
-            <div class="company">
-                <h2>Main Menu</h2>
-                <br />
-                <a href="about.php">About Us</a>
-                <a href="menu.php">Menu</a>
-                <a href="gallery.php">Gallery</a>
-                <a href="blog.php">Blog</a>
-                <a href="contact.php">Contact</a>
-            </div>
-            <div class="newsletters">
-                <h2>Newsletters</h2>
-                <br />
-                <p>Subscribe to our newsletter for news and updates!</p>
-                <div class="input-wrapper">
-                    <input type="email" class="newsletter" placeholder="Your email address">
-                    <i id="paper-plane-icon" class="fas fa-paper-plane"></i>
-                </div>
-            </div>
-            <div class="credit">
-                <hr /><br />
-                <h2>Coffee © 2023 | All Rights Reserved.</h2>
-                <h2>Designed by <span>YASHPAL SINGH & RAJDEEP KAUR</span> | BSc IT</h2>
-            </div>
-        </div>
-    </section>
+    <?php 
+    include('footer.php');
+    ?>
 
     <!-- CHAT BAR BLOCK -->
-    <div class="chat-bar-collapsible" id="direct-chatboot">
-        <button id="chat-button" type="button" class="collapsible">Chat with us! &nbsp;
-            <i id="chat-icon" style="color: #fff;" class="fas fa-comments"></i>
-        </button>
-        <div class="content">
-            <div class="full-chat-block">
-                <!-- Message Container -->
-                <div class="outer-container">
-                    <div class="chat-container">
-                        <!-- Messages -->
-                        <div id="chatbox">
-                            <h5 id="chat-timestamp"></h5>
-                            <p id="botStarterMessage" class="botText"><span>Loading...</span></p>
-                        </div>
-                        <!-- User input box -->
-                        <div class="chat-bar-input-block">
-                            <div id="userInput">
-                                <input id="textInput" class="input-box" type="text" name="msg"
-                                    placeholder="Tap 'Enter' to send a message">
-                                <p></p>
-                            </div>
-                            <div class="chat-bar-icons">
-                                <i id="chat-icon" style="color: #333;" class="fa fa-fw fa-paper-plane"
-                                    onclick="sendButton()"></i>
-                            </div>
-                        </div>
-                        <div id="chat-bar-bottom">
-                            <p></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <?php 
+    include('chatboot.php');
+    ?>
 
     <!-- JS File Link -->
     <script src="../assets/js/googleSignIn.js"></script>
@@ -633,6 +544,7 @@
     <script src="../assets/js/responses.js"></script>
     <script src="../assets/js/convo.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
 
     <script>
     // CODE FOR THE FORMSPREE
@@ -661,9 +573,9 @@
             title: 'Your Location'
         });
     }
-
-    // CODE FOR THE SHOW MORE & SHOW LESS BUTTON IN MENU
-    $(document).ready(function() {
+    
+// CODE FOR THE SHOW MORE & SHOW LESS BUTTON IN MENU
+$(document).ready(function() {
         $(".row-to-hide").hide();
         $("#showHideBtn").text("SHOW MORE");
         $("#showHideBtn").click(function() {
@@ -689,6 +601,18 @@
             }
         });
     });
+
+
+    // CODE FOR THE REDIRECT CART
+    function redirectCart() {
+        // Check if the user is logged in
+        if (!"<?php echo isset($_SESSION["username"]) ? $_SESSION["username"] : '' ?>") {
+            // Redirect the user to the login page
+            alert("You are not logged in. Please log into your account and try again.");
+            window.location.href = "users/login.php";
+        }
+    }
+
     </script>
 </body>
 
