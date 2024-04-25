@@ -428,22 +428,22 @@
 
 
 
-//     function validateForm() {
-//         let nameOnCard = document.getElementById('nameOnCard').value;
-//         let cardNumber = document.getElementById('cardNumber').value;
-//         let expiryDate = document.getElementById('expiryDate').value;
-//         let cvv = document.getElementById('cvv').value;
-//         let billingAddress = document.getElementById('billingAddress').value;
-//         let country = document.getElementById('country').value;
-//         let state = document.getElementById('state').value;
-//         let city = document.getElementById('city').value;
-//         let zipCode = document.getElementById('zipCode').value;
+    function validateForm() {
+        let nameOnCard = document.getElementById('nameOnCard').value;
+        let cardNumber = document.getElementById('cardNumber').value;
+        let expiryDate = document.getElementById('expiryDate').value;
+        let cvv = document.getElementById('cvv').value;
+        let billingAddress = document.getElementById('billingAddress').value;
+        let country = document.getElementById('country').value;
+        let state = document.getElementById('state').value;
+        let city = document.getElementById('city').value;
+        let zipCode = document.getElementById('zipCode').value;
 
-//         if (nameOnCard === '' || cardNumber === '' || expiryDate === '' || cvv === '' || billingAddress === '' ||
-//             country === '' || state === '' || city === '' || zipCode === '') {
-//             alert('Something Went Wrong');
-//         }
-//     }
+        if (nameOnCard === '' || cardNumber === '' || expiryDate === '' || cvv === '' || billingAddress === '' ||
+            country === '' || state === '' || city === '' || zipCode === '') {
+            alert('Something Went Wrong');
+        }
+    }
 
 
    document.addEventListener('DOMContentLoaded', function() {
