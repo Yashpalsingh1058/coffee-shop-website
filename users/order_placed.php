@@ -266,14 +266,14 @@
                         <div class="row">
                             <div class="col">
                                 <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" id="nameOnCard"
+                                    <input type="text" class="form-control" id="name_on_card" name="name_on_card"
                                         placeholder="name@example.com">
                                     <label for="floatingInput">Name on Card: </label>
                                 </div>
                             </div>
                             <div class="col">
                                 <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" id="cardNumber"
+                                    <input type="text" class="form-control" id="card_number" name="card_number"
                                         placeholder="name@example.com">
                                     <label for="floatingInput">Card Number: </label>
                                 </div>
@@ -287,7 +287,7 @@
 
                             <div class="col">
                                 <div class="form-floating mb-2">
-                                    <input type="text" class="form-control" id="expiryDate"
+                                    <input type="text" class="form-control" id="expiry_date" name="expiry_date"
                                         placeholder="name@example.com">
                                     <label for="floatingInput">Expiry Date: </label>
                                 </div>
@@ -295,7 +295,7 @@
 
                             <div class="col">
                                 <div class="form-floating mb-2">
-                                    <input type="text" class="form-control" id="cvv" placeholder="name@example.com">
+                                    <input type="text" class="form-control" id="cvv" name="cvv" placeholder="name@example.com">
                                     <label for="floatingInput">CVV:</label>
                                 </div>
                             </div>
@@ -305,7 +305,7 @@
 
                             <div class="col">
                                 <div class="form-floating mb-2">
-                                    <input type="text" class="form-control" id="billingAddress"
+                                    <input type="text" class="form-control" id="billing_address" name="billing_address"
                                         placeholder="name@example.com">
                                     <label for="floatingInput">Billing Address: </label>
                                 </div>
@@ -316,14 +316,14 @@
 
                             <div class="col">
                                 <div class="form-floating mb-2">
-                                    <input type="text" class="form-control" id="country" placeholder="name@example.com">
+                                    <input type="text" class="form-control" id="country" name="country" placeholder="name@example.com">
                                     <label for="floatingInput">Country: </label>
                                 </div>
                             </div>
 
                             <div class="col">
                                 <div class="form-floating mb-2">
-                                    <input type="text" class="form-control" id="state" placeholder="name@example.com">
+                                    <input type="text" class="form-control" id="state" name="state" placeholder="name@example.com">
                                     <label for="floatingInput">State: </label>
                                 </div>
                             </div>
@@ -334,14 +334,14 @@
 
                             <div class="col">
                                 <div class="form-floating mb-2">
-                                    <input type="text" class="form-control" id="city" placeholder="name@example.com">
+                                    <input type="text" class="form-control" id="city" name="city" placeholder="name@example.com">
                                     <label for="floatingInput">City: </label>
                                 </div>
                             </div>
 
                             <div class="col">
                                 <div class="form-floating mb-2">
-                                    <input type="text" class="form-control" id="zipCode" placeholder="name@example.com">
+                                    <input type="text" class="form-control" id="zip_code" name="zip_code" placeholder="name@example.com">
                                     <label for="floatingInput">Zip Code: </label>
                                 </div>
                             </div>
@@ -353,7 +353,7 @@
 
                             <div class="col">
                                 <div class="form-floating mb-2">
-                                    <input type="text" class="form-control" id="capt" readonly>
+                                    <input type="text" class="form-control" id="captcha" name="captcha" readonly>
                                 </div>
                             </div>
 
@@ -387,23 +387,7 @@
     </div>
     </form>
     <script>
-    function validateForm() {
-        let nameOnCard = document.getElementById('nameOnCard').value;
-        let cardNumber = document.getElementById('cardNumber').value;
-        let expiryDate = document.getElementById('expiryDate').value;
-        let cvv = document.getElementById('cvv').value;
-        let billingAddress = document.getElementById('billingAddress').value;
-        let country = document.getElementById('country').value;
-        let state = document.getElementById('state').value;
-        let city = document.getElementById('city').value;
-        let zipCode = document.getElementById('zipCode').value;
 
-        if (nameOnCard === '' || cardNumber === '' || expiryDate === '' || cvv === '' || billingAddress === '' ||
-            country === '' || state === '' || city === '' || zipCode === '') {
-            alert('Something Went Wrong');
-        }
-
-    }
 
     function generateCaptcha() {
         let alpha = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T',
@@ -421,7 +405,7 @@
         let f = alpha[Math.floor(Math.random() * 71)];
 
         let final = a + b + c + d + e + f;
-        document.getElementById("capt").value = final;
+        document.getElementById("captcha").value = final;
     }
 
     function validcap() {
@@ -444,22 +428,22 @@
 
 
 
-    function validateForm() {
-        let nameOnCard = document.getElementById('nameOnCard').value;
-        let cardNumber = document.getElementById('cardNumber').value;
-        let expiryDate = document.getElementById('expiryDate').value;
-        let cvv = document.getElementById('cvv').value;
-        let billingAddress = document.getElementById('billingAddress').value;
-        let country = document.getElementById('country').value;
-        let state = document.getElementById('state').value;
-        let city = document.getElementById('city').value;
-        let zipCode = document.getElementById('zipCode').value;
+//     function validateForm() {
+//         let nameOnCard = document.getElementById('nameOnCard').value;
+//         let cardNumber = document.getElementById('cardNumber').value;
+//         let expiryDate = document.getElementById('expiryDate').value;
+//         let cvv = document.getElementById('cvv').value;
+//         let billingAddress = document.getElementById('billingAddress').value;
+//         let country = document.getElementById('country').value;
+//         let state = document.getElementById('state').value;
+//         let city = document.getElementById('city').value;
+//         let zipCode = document.getElementById('zipCode').value;
 
-        if (nameOnCard === '' || cardNumber === '' || expiryDate === '' || cvv === '' || billingAddress === '' ||
-            country === '' || state === '' || city === '' || zipCode === '') {
-            alert('Something Went Wrong');
-        }
-    }
+//         if (nameOnCard === '' || cardNumber === '' || expiryDate === '' || cvv === '' || billingAddress === '' ||
+//             country === '' || state === '' || city === '' || zipCode === '') {
+//             alert('Something Went Wrong');
+//         }
+//     }
 
 
    document.addEventListener('DOMContentLoaded', function() {
