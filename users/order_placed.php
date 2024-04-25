@@ -246,7 +246,7 @@
 <body>
 
 
-    <form onsubmit="return validateForm()" method="post ">
+    <form onsubmit="return validateForm()" action="store_data.php" method="post">
         <div class="container text-center p-5">
 
             <div class="row">
