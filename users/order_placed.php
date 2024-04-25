@@ -425,17 +425,23 @@
     }
 
     function validcap() {
-        let stg1 = document.getElementById('capt').value;
-        let stg2 = document.getElementById('textinput').value;
-        if (stg1 === stg2 && stg2 !== '') {
-            alert("Order placed Successfully");
-            window.location.href = "orderconfirmation.php";
-            return true;
-        } else {
-            alert("Please enter a valid captcha");
-            return false;
-        }
+    let stg1 = document.getElementById('capt').value;
+    let stg2 = document.getElementById('textinput').value;
+    
+    console.log("stg1:", stg1);
+    console.log("stg2:", stg2);
+
+    if (stg1 === stg2 && stg2 !== '') {
+        alert("Order placed Successfully");
+        console.log("Redirecting to orderconfirmation.php...");
+        window.location.href = "orderconfirmation.php";
+        return true;
+    } else {
+        alert("Please enter a valid captcha");
+        return false;
     }
+}
+
 
 
     function validateForm() {
