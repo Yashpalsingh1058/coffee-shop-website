@@ -44,7 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Execute SQL statement
         if ($stmt->execute()) {
-            echo "Form data inserted successfully.";
+            header("Location: orderconfirmation.php");
         } else {
             echo "Error: " . $stmt->error;
         }
