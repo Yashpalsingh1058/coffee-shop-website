@@ -33,12 +33,12 @@
 
 <body>
 
-<?php 
+    <?php 
     include('header.php');
-    ?> 
+    ?>
 
-        <!-- CONTACT US SECTION -->
-        <section class="contact" id="contact" style="padding: 8rem 7%;">
+    <!-- CONTACT US SECTION -->
+    <section class="contact" id="contact" style="padding: 8rem 7%;">
         <h1 class="heading"><span>Contact</span> Us</h1>
         <div class="row">
             <div id="map" class="map pull-left"></div>
@@ -64,62 +64,71 @@
     <?php 
     include('chatboot.php');
     ?>
-      <!-- JS File Link -->
-   <script src="../assets/js/googleSignIn.js"></script>
-        <script src="../assets/js/script.js"></script>
-        <script src="../assets/js/responses.js"></script>
-        <script src="../assets/js/convo.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- JS File Link -->
+    <script src="../assets/js/googleSignIn.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/responses.js"></script>
+    <script src="../assets/js/convo.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-        <script>
-            // CODE FOR THE FORMSPREE
-            window.onbeforeunload = () => {
-                for(const form of document.getElementsByTagName('form')) {
-                    form.reset();
-                }
+    <script>
+    // CODE FOR THE FORMSPREE
+    window.onbeforeunload = () => {
+        for (const form of document.getElementsByTagName('form')) {
+            form.reset();
+        }
+    }
+
+    // CODE FOR THE GOOGLE MAPS API
+    // Define a function to set a new position for the marker
+    function setNewPosition(newPosition) {
+        var map = new google.maps.Map(document.getElementById('map'), {
+            center: newPosition,
+            zoom: 9
+        });
+
+        var marker = new google.maps.Marker({
+            position: newPosition,
+            map: map,
+            title: 'UT MARKET'
+        });
+    }
+
+    // Call the setNewPosition function with the new coordinates
+    var newPosition = {
+        lat: 31.6381,
+        lng: 74.83883
+    };
+    setNewPosition(newPosition);
+
+    // CODE FOR THE SHOW MORE & SHOW LESS BUTTON IN MENU
+    $(document).ready(function() {
+        $(".row-to-hide").hide();
+        $("#showHideBtn").text("SHOW MORE");
+        $("#showHideBtn").click(function() {
+            $(".row-to-hide").toggle();
+            if ($(".row-to-hide").is(":visible")) {
+                $(this).text("SHOW LESS");
+            } else {
+                $(this).text("SHOW MORE");
             }
+        });
+    });
 
-            // CODE FOR THE GOOGLE MAPS API
-            function initMap() {
-                var map = new google.maps.Map(document.getElementById('map'), {
-                    center: {lat: 14.99367271992383, lng: 120.17629231186626},
-                    zoom: 9
-                });
-
-                var marker = new google.maps.Marker({
-                    position: {lat: 14.99367271992383, lng: 120.17629231186626},
-                    map: map,
-                    title: 'Your Location'
-                });
+    // CODE FOR THE SHOW MORE & SHOW LESS BUTTON IN GALLERY
+    $(document).ready(function() {
+        $(".pic-to-hide").hide();
+        $("#showBtn").text("SHOW MORE");
+        $("#showBtn").click(function() {
+            $(".pic-to-hide").toggle();
+            if ($(".pic-to-hide").is(":visible")) {
+                $(this).text("SHOW LESS");
+            } else {
+                $(this).text("SHOW MORE");
             }
-
-            // CODE FOR THE SHOW MORE & SHOW LESS BUTTON IN MENU
-            $(document).ready(function() {
-                $(".row-to-hide").hide();
-                $("#showHideBtn").text("SHOW MORE");
-                $("#showHideBtn").click(function() {
-                    $(".row-to-hide").toggle();
-                    if ($(".row-to-hide").is(":visible")) {
-                        $(this).text("SHOW LESS");
-                    } else {
-                        $(this).text("SHOW MORE");
-                    }
-                });
-            });
-
-            // CODE FOR THE SHOW MORE & SHOW LESS BUTTON IN GALLERY
-            $(document).ready(function() {
-                $(".pic-to-hide").hide();
-                $("#showBtn").text("SHOW MORE");
-                $("#showBtn").click(function() {
-                    $(".pic-to-hide").toggle();
-                    if ($(".pic-to-hide").is(":visible")) {
-                        $(this).text("SHOW LESS");
-                    } else {
-                        $(this).text("SHOW MORE");
-                    }
-                });
-            });
-        </script> 
+        });
+    });
+    </script>
 </body>
+
 </html>

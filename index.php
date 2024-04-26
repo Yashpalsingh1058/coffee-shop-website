@@ -26,17 +26,103 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/convo.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <!-- font awesome cdn link -->
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico"><!-- Favicon / Icon -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"><!-- Google font cdn link -->
     <style>
-        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap");
+
     .footer .support,
     .footer .company,
     .footer .newsletters {
         flex: 0 0 calc(20% - 30px);
     }
+
+    /* .carousel {
+       
+    } */
+
+    .carousel-inner {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        height: 59rem;
+    }
+
+    .carousel-inner .carousel-item {
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+    }
+
+    .carousel-inner .carousel-item {
+        background-size: cover;
+        width: 100%;
+    }
+
+    .carousel-item {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .carousel-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+        border-top-right-radius: 9rem;
+    border-bottom-left-radius: 9rem;
+    }
+
+    .carousel-control-prev {
+    position: absolute;
+    top: 42rem;
+    bottom: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15%;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    background: 0 0;
+    /* border: 0; */
+    transition: opacity .15s ease;
+}
+
+.carousel-caption {
+    position: absolute;
+    right: 15%;
+    bottom: 1.25rem;
+    left: 15%;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    color: #fff;
+    text-align: center;
+    top: 16rem;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(4, 9, 30, 0.3);
+    border: 4px solid #ff6e00a3;
+    border-top-right-radius: 9rem;
+    border-bottom-left-radius: 9rem;
+}
+
+.highlight{
+    color: #ff6b00;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-family: 'FontAwesome';
+}
+
     </style>
 </head>
 
@@ -47,16 +133,56 @@
     include('header.php');
     ?>
 
-    <!-- HERO SECTION -->
-    <section class="home" id="home">
-        <div class="content">
-            <h3>Welcome to Coffee Shop, mga kap!</h3>
-            <p>
-                <strong>We are open 4:00 PM to 9:00 PM.</strong>
-            </p>
-            <a href="#menu" class="btn btn-dark text-decoration-none">Order Now!</a>
+  
+
+    <section class="home" id="home" style="padding: initial; margin-top: 8rem">
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="firstimg.jpg" class="d-block w-100" alt="first-img">
+            <div class="overlay"></div>
+            <div class="carousel-caption">
+                <div class="content">
+                    <h3><span class="highlight">Welcome</span> to Coffee Shop, mga kap!</h3>
+                    <p>
+                        <strong>We are open 4:00 PM to 9:00 PM.</strong>
+                    </p>
+                    <a href="#menu" class="btn btn-dark text-decoration-none">Order Now!</a>
+                </div>
+            </div>
         </div>
+        <div class="carousel-item">
+            <img src="second.jpg" class="d-block w-100" alt="first-img">
+            <div class="overlay"></div>
+            <div class="carousel-caption">
+                <div class="content">
+                    <h3><span class="highlight">Discover</span> Our Delicious Menu!</h3>
+                    <p>
+                        <strong>Try our special brews and treats.</strong>
+                    </p>
+                    <a href="#menu" class="btn btn-dark text-decoration-none">View Menu</a>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="firstimg.jpg" class="d-block w-100" alt="next-img">
+            <div class="overlay"></div>
+            <div class="carousel-caption">
+                <div class="content">
+                    <h3><span class="highlight">Join</span> Us for Happy Treet!</h3>
+                    <p>
+                        <strong>Enjoy our favorite drinks.</strong>
+                    </p>
+                    <a href="users/registeration.php" class="btn btn-dark text-decoration-none">Register Now</a>
+                </div>
+            </div>
+        </div>
+        <!-- Add more carousel-items as needed -->
+    </div>
+</div>
+
     </section>
+
 
     <!-- ABOUT US SECTION -->
     <section class="about" id="about">
@@ -89,168 +215,169 @@
 
     <!-- MENU SECTION -->
     <section class="menu" id="menu" style="width: initial;">
-      <h1 class="heading">You May Also <span>Like</span></h1>
-      <div class="box-container">
-        <div class="product-cont">
-          <div class="row">
-            <div class="col-md-4">
-              <a href="Americano.php" class="Details">
-                <div class="box">
-                  <img src="assets/images/cart-item-1.png" alt="" class="product-img" />
-                  <h3 class="product-title">
-                    Americano - Hot Espresso (12 OZ)
-                  </h3>
-                  <div class="price">₱45.00</div>
-                  <a class="add-cart" onclick="redirectCart()">Add to Cart</a>
+        <h1 class="heading">You May Also <span>Like</span></h1>
+        <div class="box-container">
+            <div class="product-cont">
+                <div class="row">
+                    <div class="col-md-4">
+                        <a href="Americano.php" class="Details">
+                            <div class="box">
+                                <img src="assets/images/cart-item-1.png" alt="" class="product-img" />
+                                <h3 class="product-title">
+                                    Americano - Hot Espresso (12 OZ)
+                                </h3>
+                                <div class="price">₱45.00</div>
+                                <a class="add-cart" onclick="redirectCart()">Add to Cart</a>
+                            </div>
+                        </a>
+                    </div>
+                    <br />
+                    <div class="col-md-4">
+                        <a href="index.php" class="Details">
+                            <div class="box">
+                                <img src="assets/images/cart-item-2.png" alt="" class="product-img" />
+                                <h3 class="product-title">Colombian Supremo Cup (12 OZ)</h3>
+                                <div class="price">₱40.00</div>
+                                <a class="add-cart" onclick="redirectCart()">Add to Cart</a>
+                            </div>
+                        </a>
+                    </div>
+                    <br />
+                    <div class="col-md-4">
+                        <a href="index.php" class="Details">
+                            <div class="box">
+                                <img src="assets/images/cart-item-3.png" alt="" class="product-img" />
+                                <h3 class="product-title">
+                                    Nitro Cold Brew w/ Straw (12 OZ)
+                                </h3>
+                                <div class="price">₱50.00</div>
+                                <a class="add-cart" onclick="redirectCart()">Add to Cart</a>
+                            </div>
+                        </a>
+                    </div>
                 </div>
-              </a>
-            </div>
-            <br />
-            <div class="col-md-4">
-              <a href="index.php" class="Details">
-                <div class="box">
-                  <img src="assets/images/cart-item-2.png" alt="" class="product-img" />
-                  <h3 class="product-title">Colombian Supremo Cup (12 OZ)</h3>
-                  <div class="price">₱40.00</div>
-                  <a class="add-cart" onclick="redirectCart()">Add to Cart</a>
+                <br />
+                <div class="row">
+                    <div class="col-md-4">
+                        <a href="index.php" class="Details">
+                            <div class="box">
+                                <img src="assets/images/cart-item-4.png" alt="" class="product-img" />
+                                <h3 class="product-title">Seasonal Single-Origin (12 OZ)</h3>
+                                <div class="price">₱30.00</div>
+                                <a class="add-cart" onclick="redirectCart()">Add to Cart</a>
+                            </div>
+                        </a>
+                    </div>
+                    <br />
+                    <div class="col-md-4">
+                        <a href="index.php" class="Details">
+                            <div class="box">
+                                <img src="assets/images/cart-item-5.png" alt="" class="product-img" />
+                                <h3 class="product-title">
+                                    Indonesian Sumatra Mandheling (12 OZ)
+                                </h3>
+                                <div class="price">₱40.00</div>
+                                <a class="add-cart" onclick="redirectCart()">Add to Cart</a>
+                            </div>
+                        </a>
+                    </div>
+                    <br />
+                    <div class="col-md-4">
+                        <a href="index.php" class="Details">
+                            <div class="box">
+                                <img src="assets/images/cart-item-6.png" alt="" class="product-img" />
+                                <h3 class="product-title">Mint Mojito Iced Coffee (12 OZ)</h3>
+                                <div class="price">₱55.00</div>
+                                <a class="add-cart" onclick="redirectCart()">Add to Cart</a>
+                            </div>
+                        </a>
+                    </div>
                 </div>
-              </a>
-            </div>
-            <br />
-            <div class="col-md-4">
-              <a href="index.php" class="Details">
-                <div class="box">
-                  <img src="assets/images/cart-item-3.png" alt="" class="product-img" />
-                  <h3 class="product-title">
-                    Nitro Cold Brew w/ Straw (12 OZ)
-                  </h3>
-                  <div class="price">₱50.00</div>
-                  <a class="add-cart" onclick="redirectCart()">Add to Cart</a>
+                <br />
+                <div class="row row-to-hide">
+                    <div class="col-md-4">
+                        <a href="index.php" class="Details">
+                            <div class="box">
+                                <img src="assets/images/cart-item-7.png" alt="" class="product-img" />
+                                <h3 class="product-title">Iced Americano (12 OZ)</h3>
+                                <div class="price">₱35.00</div>
+                                <a class="add-cart" onclick="redirectCart()">Add to Cart</a>
+                            </div>
+                        </a>
+                    </div>
+                    <br />
+                    <div class="col-md-4">
+                        <a href="index.php" class="Details">
+                            <div class="box">
+                                <img src="assets/images/cart-item-8.png" alt="" class="product-img" />
+                                <h3 class="product-title">Specialty Brews (12 OZ)</h3>
+                                <div class="price">₱85.00</div>
+                                <a class="add-cart" onclick="redirectCart()">Add to Cart</a>
+                            </div>
+                        </a>
+                    </div>
+                    <br />
+                    <div class="col-md-4">
+                        <a href="index.php" class="Details">
+                            <div class="box">
+                                <img src="assets/images/cart-item-9.png" alt="" class="product-img" />
+                                <h3 class="product-title">Seasonal Origin (12 OZ)</h3>
+                                <div class="price">₱80.00</div>
+                                <a class="add-cart" onclick="redirectCart()">Add to Cart</a>
+                            </div>
+                        </a>
+                    </div>
                 </div>
-              </a>
-            </div>
-          </div>
-          <br />
-          <div class="row">
-            <div class="col-md-4">
-              <a href="index.php" class="Details">
-                <div class="box">
-                  <img src="assets/images/cart-item-4.png" alt="" class="product-img" />
-                  <h3 class="product-title">Seasonal Single-Origin (12 OZ)</h3>
-                  <div class="price">₱30.00</div>
-                  <a class="add-cart" onclick="redirectCart()">Add to Cart</a>
+                <br />
+                <div class="row row-to-hide">
+                    <div class="col-md-4">
+                        <a href="index.php" class="Details">
+                            <div class="box">
+                                <img src="assets/images/cart-item-10.png" alt="" class="product-img" />
+                                <h3 class="product-title">
+                                    Ethiopian Yirgacheffe Cup (12 OZ)
+                                </h3>
+                                <div class="price">₱55.00</div>
+                                <a class="add-cart" onclick="redirectCart()">Add to Cart</a>
+                            </div>
+                        </a>
+                    </div>
+                    <br />
+                    <div class="col-md-4">
+                        <a href="index.php" class="Details">
+                            <div class="box">
+                                <img src="assets/images/cart-item-11.png" alt="" class="product-img" />
+                                <h3 class="product-title">
+                                    Cold Brew Tonic In a Cup (12 OZ)
+                                </h3>
+                                <div class="price">₱35.00</div>
+                                <a class="add-cart" onclick="redirectCart()">Add to Cart</a>
+                            </div>
+                        </a>
+                    </div>
+                    <br />
+                    <div class="col-md-4">
+                        <a href="index.php" class="Details">
+                            <div class="box">
+                                <img src="assets/images/cart-item-12.png" alt="" class="product-img" />
+                                <h3 class="product-title">
+                                    Caramel Cold Foam Cold Brew (12 OZ)
+                                </h3>
+                                <div class="price">₱55.00</div>
+                                <a class="add-cart" onclick="redirectCart()">Add to Cart</a>
+                            </div>
+                        </a>
+                    </div>
                 </div>
-              </a>
-            </div>
-            <br />
-            <div class="col-md-4">
-              <a href="index.php" class="Details">
-                <div class="box">
-                  <img src="assets/images/cart-item-5.png" alt="" class="product-img" />
-                  <h3 class="product-title">
-                    Indonesian Sumatra Mandheling (12 OZ)
-                  </h3>
-                  <div class="price">₱40.00</div>
-                  <a class="add-cart" onclick="redirectCart()">Add to Cart</a>
-                </div>
-              </a>
-            </div>
-            <br />
-            <div class="col-md-4">
-              <a href="index.php" class="Details">
-                <div class="box">
-                  <img src="assets/images/cart-item-6.png" alt="" class="product-img" />
-                  <h3 class="product-title">Mint Mojito Iced Coffee (12 OZ)</h3>
-                  <div class="price">₱55.00</div>
-                  <a class="add-cart" onclick="redirectCart()">Add to Cart</a>
-                </div>
-              </a>
-            </div>
-          </div>
-          <br />
-          <div class="row row-to-hide">
-            <div class="col-md-4">
-              <a href="index.php" class="Details">
-                <div class="box">
-                  <img src="assets/images/cart-item-7.png" alt="" class="product-img" />
-                  <h3 class="product-title">Iced Americano (12 OZ)</h3>
-                  <div class="price">₱35.00</div>
-                  <a class="add-cart" onclick="redirectCart()">Add to Cart</a>
-                </div>
-              </a>
-            </div>
-            <br />
-            <div class="col-md-4">
-              <a href="index.php" class="Details">
-                <div class="box">
-                  <img src="assets/images/cart-item-8.png" alt="" class="product-img" />
-                  <h3 class="product-title">Specialty Brews (12 OZ)</h3>
-                  <div class="price">₱85.00</div>
-                  <a class="add-cart" onclick="redirectCart()">Add to Cart</a>
-                </div>
-              </a>
-            </div>
-            <br />
-            <div class="col-md-4">
-              <a href="index.php" class="Details">
-                <div class="box">
-                  <img src="assets/images/cart-item-9.png" alt="" class="product-img" />
-                  <h3 class="product-title">Seasonal Origin (12 OZ)</h3>
-                  <div class="price">₱80.00</div>
-                  <a class="add-cart" onclick="redirectCart()">Add to Cart</a>
-                </div>
-              </a>
-            </div>
-          </div>
-          <br />
-          <div class="row row-to-hide">
-            <div class="col-md-4">
-              <a href="index.php" class="Details">
-                <div class="box">
-                  <img src="assets/images/cart-item-10.png" alt="" class="product-img" />
-                  <h3 class="product-title">
-                    Ethiopian Yirgacheffe Cup (12 OZ)
-                  </h3>
-                  <div class="price">₱55.00</div>
-                  <a class="add-cart" onclick="redirectCart()">Add to Cart</a>
-                </div>
-              </a>
-            </div>
-            <br />
-            <div class="col-md-4">
-              <a href="index.php" class="Details">
-                <div class="box">
-                  <img src="assets/images/cart-item-11.png" alt="" class="product-img" />
-                  <h3 class="product-title">
-                    Cold Brew Tonic In a Cup (12 OZ)
-                  </h3>
-                  <div class="price">₱35.00</div>
-                  <a class="add-cart" onclick="redirectCart()">Add to Cart</a>
-                </div>
-              </a>
-            </div>
-            <br />
-            <div class="col-md-4">
-              <a href="index.php" class="Details">
-                <div class="box">
-                  <img src="assets/images/cart-item-12.png" alt="" class="product-img" />
-                  <h3 class="product-title">
-                    Caramel Cold Foam Cold Brew (12 OZ)
-                  </h3>
-                  <div class="price">₱55.00</div>
-                  <a class="add-cart" onclick="redirectCart()">Add to Cart</a>
-                </div>
-              </a>
-            </div>
-          </div>
-          <br />
-          <center>
+                <br />
+                <center>
                     <button id="showHideBtn" class="btn btn-dark">SHOW MORE</button>
-                </center>
+                           
+                </center>
+            </div>
         </div>
-      </div>
     </section>
-    
+
 
 
 
@@ -554,28 +681,29 @@
         }
     }
 
-    // CODE FOR THE GOOGLE MAPS API
-    function initMap() {
+    // Define a function to set a new position for the marker
+    function setNewPosition(newPosition) {
         var map = new google.maps.Map(document.getElementById('map'), {
-            center: {
-                lat: 14.99367271992383,
-                lng: 120.17629231186626
-            },
+            center: newPosition,
             zoom: 9
         });
 
         var marker = new google.maps.Marker({
-            position: {
-                lat: 14.99367271992383,
-                lng: 120.17629231186626
-            },
+            position: newPosition,
             map: map,
-            title: 'Your Location'
+            title: 'UT MARKET'
         });
     }
-    
-// CODE FOR THE SHOW MORE & SHOW LESS BUTTON IN MENU
-$(document).ready(function() {
+
+    // Call the setNewPosition function with the new coordinates
+    var newPosition = {
+        lat: 31.6381,
+        lng: 74.83883
+    };
+    setNewPosition(newPosition);
+
+    // CODE FOR THE SHOW MORE & SHOW LESS BUTTON IN MENU
+    $(document).ready(function() {
         $(".row-to-hide").hide();
         $("#showHideBtn").text("SHOW MORE");
         $("#showHideBtn").click(function() {
@@ -612,7 +740,6 @@ $(document).ready(function() {
             window.location.href = "users/login.php";
         }
     }
-
     </script>
 </body>
 

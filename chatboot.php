@@ -113,6 +113,3 @@
         </div>
     </div>
 </div>
-```
-
-Yahan, har element ke `id` aur `class` names mein "custom" shabd add kiya gaya hai, jisse pichhle ke saath conflict na ho.

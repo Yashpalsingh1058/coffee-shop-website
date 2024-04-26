@@ -11,6 +11,115 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <title>Coffee Shop</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+        integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+        integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous">
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2Hhh_14Uam62GXGaTMcXWhhVkYg0EbDY&callback=initMap"
+        async defer></script>
+
+    <!-- Custom CSS File Link -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/convo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- font awesome cdn link -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico"><!-- Favicon / Icon -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"><!-- Google font cdn link -->
+    <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap");
+
+    <style>
+
+    .carousel .carousel-inner {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        height: 59rem;
+    }
+
+    .carousel-inner .carousel-item {
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+    }
+
+    .carousel-inner .carousel-item {
+        background-size: cover;
+        width: 100%;
+    }
+
+    .carousel-item {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .carousel-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+        border-top-right-radius: 9rem;
+    border-bottom-left-radius: 9rem;
+    }
+
+    .carousel-control-prev {
+    position: absolute;
+    top: 42rem;
+    bottom: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15%;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    background: 0 0;
+    /* border: 0; */
+    transition: opacity .15s ease;
+}
+
+.carousel-caption {
+    position: absolute;
+    right: 15%;
+    bottom: 1.25rem;
+    left: 15%;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    color: #fff;
+    text-align: center;
+    top: 16rem;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(4, 9, 30, 0.3);
+    border: 4px solid #ff6e00a3;
+    border-top-right-radius: 9rem;
+    border-bottom-left-radius: 9rem;
+}
+
+.highlight{
+    color: #ff6b00;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-family: 'FontAwesome';
+}
+    </style>
     <title>KapeTann Brewed Coffee Shop</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -44,14 +153,50 @@
     ?>
 
     <!-- HERO SECTION -->
-    <section class="home" id="home">
-        <div class="content">
-            <h3>Welcome to KapeTann Coffee Shop, <?php echo $_SESSION['username']; ?>!</h3>
-            <p>
-                <strong>We are open 4:00 PM to 9:00 PM.</strong>
-            </p>
-            <a href="#menu" class="btn btn-dark text-decoration-none">Order Now!</a>
+    <section class="home" id="home" style="padding: initial; margin-top: 5rem">
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner" style="height: 59rem;">
+        <div class="carousel-item active">
+            <img src="firstimg.jpg" class="d-block w-100" alt="first-img">
+            <div class="overlay"></div>
+            <div class="carousel-caption d-md-block">
+                <div class="content">
+                    <h3><span class="highlight">Welcome</span> to Coffee Shop, mga kap!</h3>
+                    <p>
+                        <strong>We are open 4:00 PM to 9:00 PM.</strong>
+                    </p>
+                    <a href="#menu" class="btn btn-dark text-decoration-none">Order Now!</a>
+                </div>
+            </div>
         </div>
+        <div class="carousel-item">
+            <img src="second.jpg" class="d-block w-100" alt="first-img">
+            <div class="overlay"></div>
+            <div class="carousel-caption d-md-block">
+                <div class="content">
+                    <h3><span class="highlight">Discover</span> Our Delicious Menu!</h3>
+                    <p>
+                        <strong>Try our special brews and treats.</strong>
+                    </p>
+                    <a href="#menu" class="btn btn-dark text-decoration-none">View Menu</a>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="firstimg.jpg" class="d-block w-100" alt="next-img">
+            <div class="overlay"></div>
+            <div class="carousel-caption d-md-block">
+                <div class="content">
+                    <h3><span class="highlight">Join</span> Us for Happy Treet!</h3>
+                    <p>
+                        <strong>Enjoy our favorite drinks.</strong>
+                    </p>
+                    <a href="users/registeration.php" class="btn btn-dark text-decoration-none">Register Now</a>
+                </div>
+            </div>
+        </div>
+        <!-- Add more carousel-items as needed -->
+    </div>
     </section>
 
     <!-- ABOUT US SECTION -->
@@ -500,23 +645,40 @@
 
     // CODE FOR THE GOOGLE MAPS API
     function initMap() {
-        var map = new google.maps.Map(document.getElementById('map'), {
-            center: {
-                lat: 14.99367271992383,
-                lng: 120.17629231186626
-            },
-            zoom: 9
-        });
+    // Set the new latitude and longitude coordinates
+    var newPosition = { lat: 31.6381, lng: 74.83883};
 
-        var marker = new google.maps.Marker({
-            position: {
-                lat: 14.99367271992383,
-                lng: 120.17629231186626
-            },
-            map: map,
-            title: 'Your Location'
-        });
-    }
+    var map = new google.maps.Map(document.getElementById('map'), {
+        center: newPosition, // Set the center of the map to the new position
+        zoom: 9
+    });
+
+    var marker = new google.maps.Marker({
+        position: newPosition, // Set the position of the marker to the new position
+        map: map,
+        title: 'Your Location'
+    });
+}
+
+// Define a function to set a new position for the marker
+function setNewPosition(newPosition) {
+    var map = new google.maps.Map(document.getElementById('map'), {
+        center: newPosition,
+        zoom: 9
+    });
+
+    var marker = new google.maps.Marker({
+        position: newPosition,
+        map: map,
+        title: 'UT MARKET'
+    });
+}
+
+// Call the setNewPosition function with the new coordinates
+var newPosition = { lat: 31.6381, lng: 74.83883};
+setNewPosition(newPosition);
+
+
 
     // CODE FOR THE SHOW MORE & SHOW LESS BUTTON IN MENU
     $(document).ready(function() {

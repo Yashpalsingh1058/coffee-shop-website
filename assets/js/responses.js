@@ -11,11 +11,11 @@ function getBotResponse(input) {
     } else if (input == "about") {
         return "Hi there! <br /><br /> <strong>KapeTann Brewed Coffee</strong> is a coffee shop and retailer in Zambales, Philippines.";
     } else if (input == "contact") {
-        return "Here's our contact information: <br /><br /> <strong>Email:</strong> abfiguerrez18@gmail.com <br /> <strong>Phone Number:</strong> 0917 134 1422 <br /> <strong>Messenger:</strong> @kapetanncoffee <br /> <strong>Address:</strong> Laoag, San Marcelino, Zambales ";
+        return "Here's our contact information: <br /><br /> <strong>Email:</strong> abfiguerrez18@gmail.com <br /> <strong>Phone Number:</strong> 0917 134 1422 <br /> <strong>Messenger:</strong> @kapetanncoffee <br /> <strong>Address:</strong>  UT Market, JRJH+79Q, Kot Khalsa Rd, Kabir Park Colony, Amritsar, Punjab 143002";
     } else if (input == "how to order") {
         return "Hi There! <br /><br /> To order, you can go to our <strong>Menu</strong> section and click the <strong'Add to Cart'></strong> button of your choice. <br /><br /> I hope you understand. Thank you so much!";
     } else if (input == "location") {
-        return "Here's our address: <strong>San Marcelino, Zambales 2207 Olongapo, Philippines</strong>";
+        return "Here's our address: <strong> UT Market, JRJH+79Q, Kot Khalsa Rd, Kabir Park Colony, Amritsar, Punjab 143002</strong>";
 
     /*
     } else if (input == "hi") {

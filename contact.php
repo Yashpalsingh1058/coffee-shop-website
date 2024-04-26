@@ -78,25 +78,23 @@
         }
     }
 
-    // CODE FOR THE GOOGLE MAPS API
-    function initMap() {
-        var map = new google.maps.Map(document.getElementById('map'), {
-            center: {
-                lat: 14.99367271992383,
-                lng: 120.17629231186626
-            },
-            zoom: 9
-        });
+    // Define a function to set a new position for the marker
+function setNewPosition(newPosition) {
+    var map = new google.maps.Map(document.getElementById('map'), {
+        center: newPosition,
+        zoom: 9
+    });
 
-        var marker = new google.maps.Marker({
-            position: {
-                lat: 14.99367271992383,
-                lng: 120.17629231186626
-            },
-            map: map,
-            title: 'Your Location'
-        });
-    }
+    var marker = new google.maps.Marker({
+        position: newPosition,
+        map: map,
+        title: 'UT MARKET'
+    });
+}
+
+// Call the setNewPosition function with the new coordinates
+var newPosition = { lat: 31.6381, lng: 74.83883};
+setNewPosition(newPosition);
 
     // CODE FOR THE SHOW MORE & SHOW LESS BUTTON IN MENU
     $(document).ready(function() {

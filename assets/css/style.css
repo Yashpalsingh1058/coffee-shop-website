@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
 
 :root {
-    --main-color: #9F5C44;
+    --main-color: #ff6b00;
     --second-color: #64342C;
     --third-color: #644C2C;
     --fourth-color: #392414;
@@ -207,7 +207,8 @@ section {
 
 .btn:hover {
     letter-spacing: .2rem;
-    background-color: var(--main-color);
+    background-color: #ff6a00b3;
+    color: #ffffff;
 }
 
 .header .cart .btn {
@@ -310,23 +311,19 @@ section {
 
 
 .home {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    background: url(../images/hero-img.png) no-repeat;
-    background-size: cover;
+    min-height: 38rem;
 }
 
 
 
-.home .content {
+/* .home .content {
     max-width: 60rem;
-}
+} */
 
 .home .content h3 {
     font-size: 6rem;
     text-transform: uppercase;
-    color: var(--sixth-color);
+    color: #fff;
 }
 
 .home .content p {
@@ -565,7 +562,7 @@ section {
       }
 
       .menu .heading span {
-        color: #9f5c44;
+        color: var(--main-color);
         text-transform: uppercase;
       }
 
