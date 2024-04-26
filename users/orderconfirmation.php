@@ -25,8 +25,7 @@
         <h1 class="mt-3">Order Confirmation</h1>
         <p class="lead">Thank you for placing your order with us!</p>
         <!-- Assume delivery time is calculated and provided by your backend -->
-        <p>Your order is expected to be delivered within 3-5 business days.</p>
-        <p>We will notify you via email or SMS once your order has been dispatched.</p>
+        <p>Your order is expected to be delivered within 10-15 minutes .</p>
       </div>
     </div>
   </div>
