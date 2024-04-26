@@ -39,7 +39,7 @@
 <body>
 <!-- HEADER SECTION -->
 <header class="header">
-        <a href="#" class="logo">
+        <a href="index.php" class="logo">
             <img src="assets/images/logo.png" class="img-logo" alt="KapeTann Logo">
         </a>
 
