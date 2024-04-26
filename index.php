@@ -133,6 +133,7 @@
     include('header.php');
     ?>
 
+<<<<<<< HEAD
   
 
     <section class="home" id="home" style="padding: initial; margin-top: 8rem">
@@ -150,6 +151,16 @@
                     <a href="#menu" class="btn btn-dark text-decoration-none">Order Now!</a>
                 </div>
             </div>
+=======
+    <!-- HERO SECTION -->
+    <section class="home" id="home">
+        <div class="content">
+            <h3>Welcome to Coffee Shop, mga kap!</h3>
+            <p>
+                <strong>We are open 4:00 PM to 9:00 PM.</strong>
+            </p>
+            <a href="menu.php" class="btn btn-dark text-decoration-none">Order Now!</a>
+>>>>>>> 9cf9f4129b1ae7520d7c8be44ab11d76d0593505
         </div>
         <div class="carousel-item">
             <img src="second.jpg" class="d-block w-100" alt="first-img">
