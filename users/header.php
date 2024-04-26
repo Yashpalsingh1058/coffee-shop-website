@@ -24,6 +24,13 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"><!-- font awesome cdn link -->
         <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico"><!-- Favicon / Icon -->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"><!-- Google font cdn link -->
+    <style>
+        .nav-item.active {
+    /* Add your active link styling here */
+    font-weight: bold;
+    color: #ff0000; /* Change color as needed */
+}
+    </style>
     </head>
 
 <body>
@@ -92,6 +99,17 @@
 
 
     <script>
+        document.addEventListener("DOMContentLoaded", function() {
+    var currentPageUrl = window.location.pathname;
+
+    // Find the corresponding menu item and add 'active' class
+    var navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(function(link) {
+        if (link.getAttribute('href') === currentPageUrl) {
+            link.classList.add('active');
+        }
+    });
+});
     // CODE FOR THE FORMSPREE
     window.onbeforeunload = () => {
         for (const form of document.getElementsByTagName('form')) {
