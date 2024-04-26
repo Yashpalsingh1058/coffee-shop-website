@@ -54,7 +54,7 @@
             <p>
                 <strong>We are open 4:00 PM to 9:00 PM.</strong>
             </p>
-            <a href="#menu" class="btn btn-dark text-decoration-none">Order Now!</a>
+            <a href="menu.php" class="btn btn-dark text-decoration-none">Order Now!</a>
         </div>
     </section>
 
