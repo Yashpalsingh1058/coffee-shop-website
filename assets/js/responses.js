@@ -9,7 +9,7 @@ function getBotResponse(input) {
     } else if (input == "menu") {
         return "Here's our menu: <br /><br /> Americano - Hot Espresso (12 OZ) - ₱45.00 <br /> Caffe Latte - Steamed Milk (12 OZ) - ₱65.00 <br /> Salted Caramel Espresso (12 OZ) - ₱75.00 <br /> Cafe Mocha Espresso (12 OZ) - ₱75.00 <br /> Spanish Latte Espresso (12 OZ) - ₱75.00 ";
     } else if (input == "about") {
-        return "Hi there! <br /><br /> <strong>KapeTann Brewed Coffee</strong> is a coffee shop and retailer in Zambales, Philippines.";
+        return "Hi there! <br /><br /> <strong> The Coffee Shop</strong> is a coffee shop and retailer  UT Market, JRJH+79Q, Kot Khalsa Rd, Kabir Park Colony, Amritsar, Punjab 143002";
     } else if (input == "contact") {
         return "Here's our contact information: <br /><br /> <strong>Email:</strong> abfiguerrez18@gmail.com <br /> <strong>Phone Number:</strong> 0917 134 1422 <br /> <strong>Messenger:</strong> @kapetanncoffee <br /> <strong>Address:</strong>  UT Market, JRJH+79Q, Kot Khalsa Rd, Kabir Park Colony, Amritsar, Punjab 143002";
     } else if (input == "how to order") {
