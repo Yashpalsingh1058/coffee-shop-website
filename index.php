@@ -133,10 +133,9 @@
     include('header.php');
     ?>
 
-<<<<<<< HEAD
   
 
-    <section class="home" id="home" style="padding: initial; margin-top: 8rem">
+    <section class="home" id="home" style="padding: initial; margin-top: 8rem;">
     <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
         <div class="carousel-item active">
@@ -144,24 +143,29 @@
             <div class="overlay"></div>
             <div class="carousel-caption">
                 <div class="content">
-                    <h3><span class="highlight">Welcome</span> to Coffee Shop, mga kap!</h3>
+                    <h3><span class="highlight">Welcome</span> to Coffee Shop</h3>
                     <p>
                         <strong>We are open 4:00 PM to 9:00 PM.</strong>
                     </p>
-                    <a href="#menu" class="btn btn-dark text-decoration-none">Order Now!</a>
+                    <a href="menu.php" class="btn btn-dark text-decoration-none">Order Now!</a>
                 </div>
             </div>
-=======
-    <!-- HERO SECTION -->
-    <section class="home" id="home">
-        <div class="content">
-            <h3>Welcome to Coffee Shop, mga kap!</h3>
-            <p>
-                <strong>We are open 4:00 PM to 9:00 PM.</strong>
-            </p>
-            <a href="menu.php" class="btn btn-dark text-decoration-none">Order Now!</a>
->>>>>>> 9cf9f4129b1ae7520d7c8be44ab11d76d0593505
+
+            </div>
+        <div class="carousel-item">
+            <img src="second.jpg" class="d-block w-100" alt="next-img">
+            <div class="overlay"></div>
+            <div class="carousel-caption">
+                <div class="content">
+                    <h3><span class="highlight">Join</span> Us for Happy Treet!</h3>
+                    <p>
+                        <strong>Enjoy our favorite drinks.</strong>
+                    </p>
+                    <a href="users/registeration.php" class="btn btn-dark text-decoration-none">Register Now</a>
+                </div>
+            </div>
         </div>
+
         <div class="carousel-item">
             <img src="second.jpg" class="d-block w-100" alt="first-img">
             <div class="overlay"></div>
@@ -175,20 +179,6 @@
                 </div>
             </div>
         </div>
-        <div class="carousel-item">
-            <img src="firstimg.jpg" class="d-block w-100" alt="next-img">
-            <div class="overlay"></div>
-            <div class="carousel-caption">
-                <div class="content">
-                    <h3><span class="highlight">Join</span> Us for Happy Treet!</h3>
-                    <p>
-                        <strong>Enjoy our favorite drinks.</strong>
-                    </p>
-                    <a href="users/registeration.php" class="btn btn-dark text-decoration-none">Register Now</a>
-                </div>
-            </div>
-        </div>
-        <!-- Add more carousel-items as needed -->
     </div>
 </div>
 
@@ -649,7 +639,7 @@
 
     <!-- CONTACT US SECTION -->
     <section class="contact" id="contact">
-        <h1 class="heading"><span>Conta</span> Contact Us</h1>
+        <h1 class="heading"><span>Cont</span>act Us</h1>
         <div class="row">
             <div id="map" class="map pull-left"></div>
             <form name="contact" method="POST" action="https://formspree.io/f/xayzavgb">

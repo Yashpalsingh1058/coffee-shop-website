@@ -24,12 +24,46 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"><!-- font awesome cdn link -->
         <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico"><!-- Favicon / Icon -->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"><!-- Google font cdn link -->
+        <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const pathName = window.location.pathname;
+        const pageName = pathName.split("/").pop();
+
+        if (pageName.toLowerCase() === "index.php") {
+            document.querySelector(".home").classList.add("activeLink");
+        }
+
+        if (pageName.toLowerCase() === "about.php") {
+            document.querySelector(".about").classList.add("activeLink");
+        }
+
+        if (pageName.toLowerCase() === "menu.php") {
+            document.querySelector(".mnu").classList.add("activeLink");
+        }
+
+        if (pageName.toLowerCase() === "gallery.php") {
+            document.querySelector(".gallery").classList.add("activeLink");
+        }
+
+        if (pageName.toLowerCase() === "blogs.php") {
+            document.querySelector(".blogs").classList.add("activeLink");
+        }
+
+        if (pageName.toLowerCase() === "contact.php") {
+            document.querySelector(".contact").classList.add("activeLink");
+        }
+
+     
+    });
+    </script>
     <style>
-        .nav-item.active {
-    /* Add your active link styling here */
-    font-weight: bold;
-    color: #ff0000; /* Change color as needed */
-}
+   .activeLink {
+        color: #ff6b00 !important;
+        background: #392414;
+        padding: 2vmin 2vmin;
+        font-weight: 900;
+        border-radius: 3px;
+    }
     </style>
     </head>
 
@@ -44,22 +78,22 @@
         <nav class="navbar navbar-expand-lg">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a href="index.php"  aria-current="page" class="text-decoration-none">Home</a>
+                    <a href="index.php"  aria-current="page" class="text-decoration-none home">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a href="about.php" class="text-decoration-none">About</a>
+                    <a href="about.php" class="text-decoration-none about">About</a>
                 </li>
                 <li class="nav-item">
-                    <a href="menu.php" class="text-decoration-none">Menu</a>
+                    <a href="menu.php" class="text-decoration-none mnu">Menu</a>
                 </li>
                 <li class="nav-item">
-                    <a href="gallery.php" class="text-decoration-none">Gallery</a>
+                    <a href="gallery.php" class="text-decoration-none gallery">Gallery</a>
                 </li>
                 <li class="nav-item">
-                    <a href="blogs.php" class="text-decoration-none">Blogs</a>
+                    <a href="blogs.php" class="text-decoration-none blogs">Blogs</a>
                 </li>
                 <li class="nav-item">
-                    <a href="contact.php" class="text-decoration-none">Contact</a>
+                    <a href="contact.php" class="text-decoration-none contact">Contact</a>
                 </li>
                 <li class="nav-item">
                     <a href="logout.php" class="text-decoration-none">Logout</a>
