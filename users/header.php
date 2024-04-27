@@ -66,17 +66,20 @@
     }
 
     .add-to-cart-notification {
-            position: absolute;
-            top: -5px;
-            right: -5px;
-            background-color: red;
-            color: white;
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        position: absolute;
+    top: 15px;
+    right: 86px;
+    background-color: #ff6b00;
+    color: #392414 !important;
+    width: 24px;
+    height: 22px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 8px; */
+    font-size: 22px !important;
+    text-align: center;
         }
     </style>
     </head>
@@ -119,7 +122,7 @@
             <div class="fas fa-search" id="search-btn"></div>
             <div class="fas fa-shopping-cart" id="cart-btn">
                  <!-- Notification Bubble -->
-                 <div class="add-to-cart-notification">0</div>
+                <div class="add-to-cart-notification">0</div>
             </div>
             <div class="fas fa-bars" id="menu-btn"></div>
         </div>
@@ -225,6 +228,53 @@
         }
     }
     </script>
+<!-- Add this script block at the end of your HTML body -->
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Function to update the cart notification bubble
+        function updateCartNotification() {
+            var cartItemsCount = document.querySelectorAll('.cart-box').length;
+            var cartNotification = document.querySelector('.add-to-cart-notification');
+            cartNotification.textContent = cartItemsCount;
+            cartNotification.style.display = cartItemsCount > 0 ? 'block' : 'none';
+        }
+
+        // Function to add a product to the cart
+        function addProductToCart(title, price, productImg) {
+            // Your existing code to add product to cart goes here
+            
+            // After adding product to cart, update the cart notification
+            updateCartNotification();
+        }
+
+        // Function to show the cart section
+        function showCart() {
+            cartItem.classList.add('active');
+            navbar.classList.remove('active');
+            searchForm.classList.remove('active');
+        }
+
+        // Add event listener to all 'Add to Cart' buttons
+        var addToCartButtons = document.querySelectorAll('.add-cart');
+        addToCartButtons.forEach(function(button) {
+            button.addEventListener('click', function(event) {
+                var shopProducts = event.target.parentElement;
+                var title = shopProducts.querySelector(".product-title").innerText;
+                var price = shopProducts.querySelector(".price").innerText;
+                var productImg = shopProducts.querySelector(".product-img").src;
+                addProductToCart(title, price, productImg);
+                showCart(); // Show the cart section after adding product
+            });
+        });
+
+        // Initially hide the cart notification bubble
+        var cartNotification = document.querySelector('.add-to-cart-notification');
+        cartNotification.style.display = 'none';
+    });
+</script>
+
+
+
     </body>
 
 </html>

@@ -50,6 +50,7 @@ if (document.readyState == 'loading') {
 function ready() {
     //Remove Items from Cart
     var removeCartButtons = document.getElementsByClassName('cart-remove');
+    console.log(removeCartButtons);
     for (var i = 0; i < removeCartButtons.length; i++){
         var button = removeCartButtons[i];
         button.addEventListener('click', removeCartItem);
@@ -125,7 +126,6 @@ function removeCartItem(event) {
     var buttonClicked = event.target;
     buttonClicked.parentElement.remove();
     updateTotal();
-    updateCartNotification();
 }
 
 // Function for "When quantity changes"
@@ -135,7 +135,6 @@ function quantityChanged(event) {
         input.value = 1;
     }
     updateTotal();
-    updateCartNotification();
 }
 
 //Add to Cart
@@ -147,8 +146,91 @@ function addCartClicked(event) {
     var productImg = shopProducts.getElementsByClassName("product-img")[0].src;
     addProductToCart(title, price, productImg);
     updateTotal();
-    updateCartNotification();
 }
+
+function addProductToCart(title, price, productImg) {
+    var cartShopBox = document.createElement("div");
+    cartShopBox.classList.add("cart-box");
+    var cartItems = document.getElementsByClassName("cart-content")[0];
+    var cartItemsNames = cartItems.getElementsByClassName("cart-product-title");
+    for (var i = 0; i < cartItemsNames.length; i++) {
+        if (cartItemsNames[i].innerText == title) {
+            alert("You have already added this item to cart!")
+            return;
+        }
+    }
+    var cartBoxContent = `
+                    <img src="${productImg}" alt="" class="cart-img">
+                    <div class="detail-box">
+                        <div class="cart-product-title">${title}</div>
+                        <div class="cart-price">${price}</div>
+                        <input type="number" value="1" min="1" class="cart-quantity">
+                    </div>
+                    <!-- REMOVE BUTTON -->
+                    <i class="fas fa-trash cart-remove"></i>`;
+    cartShopBox.innerHTML = cartBoxContent;
+    cartItems.append(cartShopBox);
+    cartShopBox
+        .getElementsByClassName("cart-remove")[0]
+        .addEventListener('click', removeCartItem);
+    cartShopBox
+        .getElementsByClassName("cart-quantity")[0]
+        .addEventListener('change', quantityChanged);
+
+}
+
+// Update Total
+function updateTotal() {
+    var cartContent = document.getElementsByClassName("cart-content")[0];
+    var cartBoxes = cartContent.getElementsByClassName("cart-box");
+    var total = 0;
+    for (var i = 0; i < cartBoxes.length; i++) {
+        var cartBox = cartBoxes[i];
+        var priceElement = cartBox.getElementsByClassName("cart-price")[0];
+        var quantityElement = cartBox.getElementsByClassName("cart-quantity")[0];
+        var price = parseFloat(priceElement.innerText.replace("₱", ""));
+        var quantity = quantityElement.value;
+        total = total + (price * quantity);
+    }
+        total = Math.round(total * 100) / 100;
+        
+        document.getElementsByClassName("total-price")[0].innerText = "₱" + total;
+}
+
+
+// Store add-to-cart products in local storage
+// Add event listeners to all "Add to Cart" buttons
+// var addToCartButtons = document.querySelectorAll('.add-cart');
+// addToCartButtons.forEach(function(button) {
+//     button.addEventListener('click', function(event) {
+//         var productBox = event.target.parentElement;
+//         var productImg = productBox.querySelector('.product-img').getAttribute('src');
+//         var productTitle = productBox.querySelector('.product-title').innerText;
+//         var productPrice = productBox.querySelector('.price').innerText;
+
+//         // Create an object to store product details
+//         var productDetails = {
+//             title: productTitle,
+//             price: productPrice,
+//             productImg: productImg
+//         };
+
+//         // Retrieve existing cart items from local storage
+//         var cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+
+//         // Add the new product to the cart
+//         cartItems.push(productDetails);
+
+//         // Store updated cart items back to local storage
+//         localStorage.setItem('cart', JSON.stringify(cartItems));
+
+//         // Optional: You can provide some feedback to the user, like a message or animation
+//         alert('Product added to cart!');
+//     });
+// });
+
+
+
 
 function addProductToCart(title, price, productImg) {
     var cartShopBox = document.createElement("div");
@@ -223,18 +305,7 @@ function updateQuantity(title, newQuantity) {
     }
 }
 
-function updateCartNotification() {
-    var cartItems = JSON.parse(localStorage.getItem('cart')) || [];
-    var cartNotification = document.querySelector('.add-to-cart-notification');
-    if (cartItems.length > 0) {
-        cartNotification.textContent = cartItems.length;
-        cartNotification.style.display = 'block';
-    } else {
-        cartNotification.style.display = 'none';
-    }
-}
 
 window.onload = function() {
     localStorage.removeItem('cart');
-    updateCartNotification();
 }
