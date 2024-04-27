@@ -638,7 +638,7 @@
     </section>
 
     <!-- CONTACT US SECTION -->
-    <section class="contact" id="contact">
+    <!-- <section class="contact" id="contact">
         <h1 class="heading"><span>Cont</span>act Us</h1>
         <div class="row">
             <div id="map" class="map pull-left"></div>
@@ -654,7 +654,11 @@
                 <button type="submit" class="btn">Contact Now</button>
             </form>
         </div>
-    </section>
+    </section> -->
+    <?php 
+    include('contact.php');
+    ?>
+
 
     <!-- FOOTER SECTION -->
     <?php 
