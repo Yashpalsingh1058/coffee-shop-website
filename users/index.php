@@ -119,6 +119,22 @@
     letter-spacing: 3px;
     font-family: 'FontAwesome';
 }
+
+.add-to-cart-notification {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 14px;
+    text-align: center;
+    line-height: 20px;
+    display: none;
+}
+
     </style>
     <title>KapeTann Brewed Coffee Shop</title>
 
@@ -557,13 +573,13 @@
                     </div>
                     <div class="col-md-4">
                         <div class="box">
-                            <img src="assets/images/quote-img.png" alt="" class="quote">
+                            <img src="../assets/images/quote-img.png" alt="" class="quote">
                             <p>
                                 This coffee shop isn't just about great coffee; it's about community. I've met some of
                                 my closest friends here over a shared love for caffeine and conversation. The cozy
                                 atmosphere and friendly staff make it feel like a home away from home.
                             </p>
-                            <img src="assets/images/pic-2.png" alt="" class="user">
+                            <img src="../assets/images/pic-2.png" alt="" class="user">
                             <h3>Mark</h3>
                             <div class="stars">
                                 <i class="fas fa-star"></i>
@@ -576,13 +592,13 @@
                     </div>
                     <div class="col-md-4">
                         <div class="box">
-                            <img src="assets/images/quote-img.png" alt="" class="quote">
+                            <img src="../assets/images/quote-img.png" alt="" class="quote">
                             <p>
                                 The aroma of freshly brewed coffee hits you the moment you step in. Every sip is a
                                 journey through rich flavors and comforting warmth. This coffee shop has become my
                                 sanctuary, where I can unwind and indulge in the perfect cup.
                             </p>
-                            <img src="assets/images/pic-3.png" alt="" class="user">
+                            <img src="../assets/images/pic-3.png" alt="" class="user">
                             <h3>Sarah</h3>
                             <div class="stars">
                                 <i class="fas fa-star"></i>

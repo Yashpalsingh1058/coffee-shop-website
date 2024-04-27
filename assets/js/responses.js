@@ -11,7 +11,7 @@ function getBotResponse(input) {
     } else if (input == "about") {
         return "Hi there! <br /><br /> <strong> The Coffee Shop</strong> is a coffee shop and retailer  UT Market, JRJH+79Q, Kot Khalsa Rd, Kabir Park Colony, Amritsar, Punjab 143002";
     } else if (input == "contact") {
-        return "Here's our contact information: <br /><br /> <strong>Email:</strong> abfiguerrez18@gmail.com <br /> <strong>Phone Number:</strong> 0917 134 1422 <br /> <strong>Messenger:</strong> @kapetanncoffee <br /> <strong>Address:</strong>  UT Market, JRJH+79Q, Kot Khalsa Rd, Kabir Park Colony, Amritsar, Punjab 143002";
+        return "Here's our contact information: <br /><br /> <strong>Email:</strong> abfiguerrez18@gmail.com <br /> <strong>Phone Number:</strong> 0917 134 1422 <br /> <strong>Messenger:</strong>Yashpal.indosurplus@gmail.com <br /> <strong>Address:</strong>  UT Market, JRJH+79Q, Kot Khalsa Rd, Kabir Park Colony, Amritsar, Punjab 143002";
     } else if (input == "how to order") {
         return "Hi There! <br /><br /> To order, you can go to our <strong>Menu</strong> section and click the <strong'Add to Cart'></strong> button of your choice. <br /><br /> I hope you understand. Thank you so much!";
     } else if (input == "location") {

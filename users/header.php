@@ -64,6 +64,20 @@
         font-weight: 900;
         border-radius: 3px;
     }
+
+    .add-to-cart-notification {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background-color: red;
+            color: white;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
     </style>
     </head>
 
@@ -103,7 +117,10 @@
         </nav>
         <div class="icons">
             <div class="fas fa-search" id="search-btn"></div>
-            <div class="fas fa-shopping-cart" id="cart-btn"></div>
+            <div class="fas fa-shopping-cart" id="cart-btn">
+                 <!-- Notification Bubble -->
+                 <div class="add-to-cart-notification">0</div>
+            </div>
             <div class="fas fa-bars" id="menu-btn"></div>
         </div>
 
@@ -116,13 +133,12 @@
         <!-- CART SECTION -->
         <div class="cart">
             <h2 class="cart-title">Your Cart:</h2>
-            <div class="cart-content">
-
-            </div>
+            <div class="cart-content"></div>
             <div class="total">
                 <div class="total-title">Total: </div>
                 <div class="total-price">₱0</div>
             </div>
+         
             <!-- BUY BUTTON -->
             <a href="order_placed.php" style="text-decoration: none;"><button type="button" class="btn-buy">Checkout Now</button></a>
         </div>
